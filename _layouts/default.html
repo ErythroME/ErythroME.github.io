@@ -2,9 +2,21 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html charset=utf-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1">
 	<title>{{ page.title }}</title>
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/custom.css">
 </head>
-<body>
-	{{ content }}
+<body style="background-color: rgba(238,237,227,1)">
+	<div class="container">
+		<div class="row">
+			{{ content }}
+		</div>
+	</div>
+<script src="../assets/js/jquery-1.11.1.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script>
+	$(".page-header").css("border-bottom", "1px solid rgb(221, 221, 221)");
+</script>
 </body>
 </html>

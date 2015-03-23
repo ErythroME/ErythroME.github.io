@@ -1,10 +1,10 @@
 ---
 layout: default
-title: 我的Blog
+title: 刘怡年的Blog
 ---
-<h2>{{ page.title }}</h2>
-<p>最新文章</p>
-<ul>
+<h2 class="page-header">{{ page.title }}</h2>
+<h3 class="col-sm-10 page-header">最新文章</h3>
+<ul class="col-sm-10">
 	{% for post in site.posts %}
 		<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 	{% endfor %}

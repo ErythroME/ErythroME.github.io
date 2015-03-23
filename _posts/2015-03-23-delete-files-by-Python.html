@@ -1,0 +1,45 @@
+---
+layout: common
+title: Python脚本批量删除特定后缀名的文件
+---
+<h2 id="id_article_title">{{ page.title }}</h2>
+<h4 id="id_article_date"><small>{{ page.date | date_to_string }}</small></h4>
+<p id="id_article_text">最近在学编译原理，写词法分析器的过程中，发现了一个问题：目录下每个c文件编译运行后会生成.o和.exe文件，再加上编译器备份时生成的bak文件，造成文件十分繁杂。轻微强迫症的我表示不能忍，正好前段时间学了Python，于是用Python写了一个脚本来批量删除多余文件。</p>
+<pre id="id_article_code">
+import os
+import sys
+import os.path
+import shutil
+    
+#获取当前路径
+def fileDir() :
+    path = sys.path[ 0 ]
+    print(path)
+    #判断为脚本文件还是编译后文件，如果是脚本文件则返回脚本目录，否则返回编件译后的文件路径
+    if os.path.isdir( path ) :
+        return path
+    elif os.path.isfile( path ) :
+        return os.path.dirname( path )
+    
+#获取文件后缀名
+def suffix( file, *suffixName ) :
+    array = map( file.endswith, suffixName )
+    if True in array :
+        return True
+    else :
+        return False
+    
+#删除目录下扩展名为.o,.exe,.bak的文件
+def deleteFile() :
+    targetDir = fileDir()
+    for file in os.listdir( targetDir ) :
+        targetFile = os.path.join( targetDir, file )
+        if suffix( file, '.o', '.bak', '.exe' ):
+            os.remove( targetFile )
+    
+if __name__ == '__main__' :
+    deleteFile()
+</pre>
+<h4 id="id_article_reference">参考文献</h4>
+<p class="article_reference_item"><a href="http://www.cnblogs.com/pchgo/archive/2011/09/19/2181248.html">Python获取当前脚本文件路径目录</a></p>
+<p class="article_reference_item"><a href="http://blog.chinaunix.net/uid-27571599-id-3487464.html">使用Python查找目录下特定后缀名的文件</a></p>

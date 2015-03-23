@@ -4,3 +4,4 @@ name: Liu Yinian
 email: megas.nmsis@hotmail.com
 github: ErythroME
 baseurl: /erythrome.github.io
+permalink: /:year/:month/:day/:title

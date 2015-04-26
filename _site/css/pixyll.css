@@ -24,9 +24,9 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
   display: block; }
 
 body {
-  font-family: 'Helvetica Neue', 微软雅黑,Helvetica, sans-serif;
+  font-family: '微软雅黑', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   line-height: 1.5rem;
-  font-weight: 400; }
+  font-weight: normal; }
 
 h1, .h1, .f1 {
   font-size: 2rem;
@@ -62,7 +62,7 @@ small, .small, .f5 {
     line-height: 2rem; }
 
   .p {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 2rem; }
 
   .small {
@@ -615,7 +615,7 @@ a:hover {
 
 */
 body {
-  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif; }
+  font-family: '微软雅黑', 'Arial', "Merriweather", "PT Serif", Georgia, "Times New Roman", serif; }
 
 html, body {
   height: 100%; }
@@ -739,7 +739,7 @@ table {
 .pagination,
 .button {
   font-size: 1rem;
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: '微软雅黑', 'Arial', 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 300;
   text-align: center; }
 
@@ -792,7 +792,7 @@ table {
   background-color: #999; }
 
 form {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: '微软雅黑', 'Arial', 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 300;
   font-size: 1rem; }
 
@@ -809,7 +809,7 @@ abbr {
   cursor: help; }
 
 pre, code {
-  font-family: Menlo, Monaco, "Courier New", monospace; }
+  font-family: "微软雅黑", "Arial", Menlo, Monaco, "Courier New", monospace; }
 
 code {
   color: #7a7a7a; }
@@ -849,7 +849,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: '微软雅黑', 'Arial', "Lato", 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 900;
   line-height: 1.2;
   margin: 1em 0 0.5em; }
@@ -1005,7 +1005,7 @@ footer,
 footer .wrap {
   color: #7a7a7a;
   background-color: #fafafa;
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: '微软雅黑', 'Arial', 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 300;
   clear: both; }
 

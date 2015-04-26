@@ -11,14 +11,14 @@ google_analytics:
 # Optional features
 animated:           true
 show_related_posts: false
-show_post_footers:  false
+show_post_footers:  true
 
 # Disqus post comments
 # (leave blank to disable Disqus)
-disqus_shortname:
+disqus_shortname:   megasblog
 
 # Social icons
-show_social_icons: false
+show_social_icons: true
 github_username:   ErythroME
 stackoverflow_id:
 twitter_username:

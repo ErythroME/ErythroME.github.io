@@ -1,11 +1,24 @@
 ---
 layout: default
-title: 刘怡年的Blog
 ---
-<h2 class="page-header">{{ page.title }}</h2>
-<h3 class="col-sm-10 page-header">最新文章</h3>
-<ul class="col-sm-10">
-	{% for post in site.posts %}
-		<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-	{% endfor %}
-</ul>
+
+<div class="home">
+
+  <div class="posts">
+    {% for post in site.posts %}
+      <div class="post">
+        <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link"><h3 class="h2 post-title">{{ post.title }}</h3></a>
+        <p class="post-summary">
+          {% if post.summary %}
+            {{ post.summary }}
+          {% else %}
+            {{ post.excerpt }}
+          {% endif %}
+        </p>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% include pagination.html %}
+</div>

@@ -1,76 +1,148 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="content-type" content="text/html charset=utf-8">
-	<meta name="viewpoint" content="width=device-width, initial-scale=1">
-	<title>Python脚本批量删除特定后缀名的文件</title>
-	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/assets/css/custom.css">
-	<link rel="stylesheet" href="/assets/css/prettify.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Python脚本批量删除特定后缀名的文件 &#8211; Megas's Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Python脚本批量删除特定后缀名的文件">
+    <meta name="author" content="Megas">
+    <meta name="keywords" content="">
+    <link rel="canonical" href="/2015/03/23/delete-files-by-Python">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Python脚本批量删除特定后缀名的文件">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="/2015/03/23/delete-files-by-Python">
+    <meta property="og:site_name" content="Megas&#39;s Blog">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
 </head>
-<body style="background-color: rgba(238,237,227,1)" onload="prettyPrint()">
-	<div class="container">
-		<div class="row">
-			<a href="/" style="text-decoration: none"><h2 id="common-name" class="page-header">刘怡年的博客</h2></a>
-		</div>
-		<div class="thumbnail multiple-shadow">
-			<div class="row">
-				<h2 id="id_article_title">Python脚本批量删除特定后缀名的文件</h2>
-<h4 id="id_article_date"><small>23 Mar 2015</small></h4>
+
+<body class="">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="" class="site-title">Megas's Blog</a>
+      <nav class="site-nav right">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Python脚本批量删除特定后缀名的文件</h1>
+  <span class="post-meta">Mar 23, 2015</span><br>
+  
+  <span class="post-meta small">1 minute read</span>
+</div>
+
+<article class="post-content">
+  <!-- <h2 id="id_article_title">Python脚本批量删除特定后缀名的文件</h2>
+<h4 id="id_article_date"><small>23 Mar 2015</small></h4> -->
 <p id="id_article_text">最近在学编译原理，写词法分析器的过程中，发现了一个问题：目录下每个c文件编译运行后会生成.o和.exe文件，再加上编译器备份时生成的bak文件，造成文件十分繁杂。轻微强迫症的我表示不能忍，正好前段时间学了Python，于是用Python写了一个脚本来批量删除多余文件。</p>
 <pre id="id_article_code">
-import os
-import sys
-import os.path
-import shutil
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
     
-#获取当前路径
-def fileDir() :
-    path = sys.path[ 0 ]
-    print(path)
-    #判断为脚本文件还是编译后文件，如果是脚本文件则返回脚本目录，否则返回编件译后的文件路径
-    if os.path.isdir( path ) :
-        return path
-    elif os.path.isfile( path ) :
-        return os.path.dirname( path )
+<span class="c">#获取当前路径</span>
+<span class="k">def</span> <span class="nf">fileDir</span><span class="p">()</span> <span class="p">:</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">[</span> <span class="mi">0</span> <span class="p">]</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="c">#判断为脚本文件还是编译后文件，如果是脚本文件则返回脚本目录，否则返回编件译后的文件路径</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span> <span class="n">path</span> <span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">path</span>
+    <span class="k">elif</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span> <span class="n">path</span> <span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span> <span class="n">path</span> <span class="p">)</span>
     
-#获取文件后缀名
-def suffix( file, *suffixName ) :
-    array = map( file.endswith, suffixName )
-    if True in array :
-        return True
-    else :
-        return False
+<span class="c">#获取文件后缀名</span>
+<span class="k">def</span> <span class="nf">suffix</span><span class="p">(</span> <span class="nb">file</span><span class="p">,</span> <span class="o">*</span><span class="n">suffixName</span> <span class="p">)</span> <span class="p">:</span>
+    <span class="n">array</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span> <span class="nb">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">,</span> <span class="n">suffixName</span> <span class="p">)</span>
+    <span class="k">if</span> <span class="bp">True</span> <span class="ow">in</span> <span class="n">array</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
     
-#删除目录下扩展名为.o,.exe,.bak的文件
-def deleteFile() :
-    targetDir = fileDir()
-    for file in os.listdir( targetDir ) :
-        targetFile = os.path.join( targetDir, file )
-        if suffix( file, '.o', '.bak', '.exe' ):
-            os.remove( targetFile )
+<span class="c">#删除目录下扩展名为.o,.exe,.bak的文件</span>
+<span class="k">def</span> <span class="nf">deleteFile</span><span class="p">()</span> <span class="p">:</span>
+    <span class="n">targetDir</span> <span class="o">=</span> <span class="n">fileDir</span><span class="p">()</span>
+    <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span> <span class="n">targetDir</span> <span class="p">)</span> <span class="p">:</span>
+        <span class="n">targetFile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="n">targetDir</span><span class="p">,</span> <span class="nb">file</span> <span class="p">)</span>
+        <span class="k">if</span> <span class="n">suffix</span><span class="p">(</span> <span class="nb">file</span><span class="p">,</span> <span class="s">&#39;.o&#39;</span><span class="p">,</span> <span class="s">&#39;.bak&#39;</span><span class="p">,</span> <span class="s">&#39;.exe&#39;</span> <span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span> <span class="n">targetFile</span> <span class="p">)</span>
     
-if __name__ == '__main__' :
-    deleteFile()
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span> <span class="p">:</span>
+    <span class="n">deleteFile</span><span class="p">()</span></code></pre></div>
 </pre>
 <h4 id="id_article_reference">参考文献</h4>
 <p class="article_reference_item"><a href="http://www.cnblogs.com/pchgo/archive/2011/09/19/2181248.html">Python获取当前脚本文件路径目录</a></p>
 <p class="article_reference_item"><a href="http://blog.chinaunix.net/uid-27571599-id-3487464.html">使用Python查找目录下特定后缀名的文件</a></p>
 
-			</div>
-		</div>
-	</div>
-<script src="/assets/js/jquery-1.11.1.min.js"></script>
-<script src="/assets/js/bootstrap.min.js"></script>
-<script src="/assets/js/prettify.js"></script>
-<script>
-	$("#id_article_title").addClass("page-header").addClass("col-sm-10").addClass("col-sm-offset-1");
-	$(".page-header").css("border-bottom", "1px solid rgb(221, 221, 221)");
-	$("#id_article_text").addClass("col-sm-10").addClass("col-sm-offset-1");
-	$("#id_article_date").addClass("col-sm-2").addClass("col-sm-offset-9");
-	$("#id_article_code").addClass("col-sm-8").addClass("col-sm-offset-2").addClass("prettyprint");
-	$("#id_article_reference").addClass("col-sm-10").addClass("col-sm-offset-1");
-	$(".article_reference_item").addClass("col-sm-10").addClass("col-sm-offset-1");
-</script>
+</article>
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="p2 wrap">
+    <div class="measure mt1 center">
+      <small>
+        Megas Liu
+      </small>
+    </div>
+  </div>
+</footer>
+
+
+
 </body>
 </html>

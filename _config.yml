@@ -53,3 +53,7 @@ permalink:    pretty
 paginate:     3
 sass:
   compressed: true
+
+# Resource settings
+safe: false
+cdn_url: 

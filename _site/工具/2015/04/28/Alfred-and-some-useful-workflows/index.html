@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>神器Alfred和更神的workflow &#8211; Megas的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="虽然在Mac下Spotlight有很多强大的功能，但与Alfred相比还是略有欠缺。而武装各式workflow后Alfred堪称神兵利器~">
+    <meta name="author" content="Megas">
+    <meta name="keywords" content="工具">
+    <link rel="canonical" href="http://erythrome.github.io/%E5%B7%A5%E5%85%B7/2015/04/28/Alfred-and-some-useful-workflows/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    
+
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="神器Alfred和更神的workflow">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://erythrome.github.io/%E5%B7%A5%E5%85%B7/2015/04/28/Alfred-and-some-useful-workflows/">
+    <meta property="og:site_name" content="Megas的博客">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+</head>
+
+<body class="animated fade-in-down">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <!-- <a href="http://erythrome.github.io" class="site-title">Megas的博客</a> -->
+      <a href="javascript:void(0)" onclick="window.location.href='http://erythrome.github.io'" class="site-title">Megas的博客</a>
+      <nav class="site-nav right">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="left">
+    
+      <a class="fa fa-github" href="https://github.com/ErythroME"></a>
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:megas.nmsis@hotmail.com"></a>
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p3 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+
+
+<div class="post-header mb3">
+  <h3>神器Alfred和更神的workflow</h3>
+  <span class="post-meta">Apr 28, 2015</span><br>
+  
+  <span class="post-meta small">1 minute read</span>
+</div>
+
+<article class="post-content">
+  <h4 id="spotlight与alfred">Spotlight与Alfred</h4>
+
+<p>OS X 中集成的Spotlight拥有快速文件检索、快速打开应用、计算等功能，感觉非常方便。Spotlight中我最喜欢的功能是下面这个快速检索和预览文件</p>
+
+<p><img src="/images/AlfredAndSomeUsefulWorkflowsImage1.png" alt="快速文件检索和预览文件"></p>
+
+<p><a href="http://www.alfredapp.com">Alfred</a>与Spotlight相似，它除了使用同Spotlight一样的索引来完成基本功能外，还具有很多优点。不过与其强大功能相对应的是价格：最低要£17，终身免费升级的Mega Supporter需要£32，大约三百软妹币。程序猿建议直接上Mega Supporter，Alfred绝对对得起每一分钱~看到小清新的界面就很舒心有木有~</p>
+
+<p><img src="/images/AlfredAndSomeUsefulWorkflowsImage3.png" alt="Alfred"></p>
+
+<hr>
+
+<h4 id="alfred中的snippets">Alfred中的Snippets</h4>
+
+<p>虽然人们一提Alfred必提workflow，但我还是想先介绍一下Snippets。</p>
+
+<p>用户可以利用Snippets设置一些固定的、较长的输入，以option+cmd+c键唤起，之后就可以直接选择或者用关键字搜索Snippet，对应文本将直接填入光标处。<img src="/images/AlfredAndSomeUsefulWorkflowsImage2.png" alt="Snippets"></p>
+
+<p>Snippets功能非常简单，不过用了才发现，小小功能省不少事哟~</p>
+
+<hr>
+
+<h4 id="花式workflow">花式workflow</h4>
+
+<p>购买Alfred的Powerpack后，就可以尽情搜索各式workflow，也可以自己动手编写。筒子们，你们的征途是workflow大海~</p>
+
+<p>下面是我常用的workflow</p>
+
+<h5 id="vpn-toggle"><a href="https://github.com/superkam/Alfred2_VPNToggle">VPN Toggle</a></h5>
+
+<p>由于我是VPN重度用户——每天打开电脑第一件事就是开VPN，这个workflow对我来讲堪称神器。VPN Toogle用来自由开关VPN，或者在多个VPN代理之间切换。我个人用的是<a href="http://opticalvpn.com/?r=e4898da811f3c34e">云梯VPN</a>（这是我的链接），感觉切换起来很方便，也有多种选择，比一些免费VPN要稳定。</p>
+
+<p><img src="/images/AlfredAndSomeUsefulWorkflowsImage4.png" alt="VPN Toggle"></p>
+
+<h5 id="kill-process"><a href="https://github.com/nathangreenstein/alfred-process-killer">Kill Process</a></h5>
+
+<p>这个Workflow用来关掉进程，当然也能关闭应用。由于Mac下点击左上角的红色关闭按钮仅仅是关闭了窗口，并未关闭进程，有时感觉会有不便。导入这个workflow之后只需唤起Alfred，输入kill+应用名称（或进程名），即可将其关闭，十分简捷。</p>
+
+<p><img src="/images/AlfredAndSomeUsefulWorkflowsImage5.png" alt="Kill Process"></p>
+
+<h5 id="http-codes"><a href="https://github.com/JoelQ/alfred-http">HTTP codes</a></h5>
+
+<p>一个方便程序猿的小工具。只要在Alfred输入http+状态码，便可以查到其所对应的状态信息。治疗健忘的神器~</p>
+
+<p><img src="/images/AlfredAndSomeUsefulWorkflowsImage6.png" alt="HTTP codes"></p>
+
+<h5 id="知乎"><a href="https://github.com/KJlmfe/Alfred-workflows/raw/master/zhihu.alfredworkflow">知乎</a></h5>
+
+<p>知乎重度患者适用。zh+关键词可以搜索问题、话题和人，zhdaily可以看到知乎日报条目。利用了Alfred 2的feedback特性，搜索结果都可在Alfred中显示条目，很赞。</p>
+
+<p><img src="/images/AlfredAndSomeUsefulWorkflowsImage7.png" alt="知乎"></p>
+
+<hr>
+
+<p>还有很多有意思的workflow，可以查看这些网页：</p>
+
+<ul>
+<li><a href="http://www.alfredforum.com/forum/3-share-your-workflows/">Alfred官网的分享区</a></li>
+<li><a href="http://www.zhihu.com/question/20656680">知乎上大家的推荐</a></li>
+<li><a href="http://www.alfredworkflow.com">一个收集workflow的网站</a>（这里有的workflow貌似无法下载）</li>
+</ul>
+
+</article>
+
+
+
+<!--
+  <div class="py2 post-footer">
+  <img src="/images/me.jpeg" alt="John Otander" class="avatar" />
+  <p>
+    Pixyll is an open-source Jekyll theme that's built by <a href="http://johnotander.com">John Otander</a>.
+    When he's not writing code and building things, he likes to ski. A. Lot.
+  </p>
+  <p>
+    Follow him on <a href="https://twitter.com/4lpine">Twitter</a>.
+  </p>
+</div>
+
+-->
+
+<!--  -->
+
+ 
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="/%E5%B7%A5%E5%85%B7/2015/04/28/Alfred-and-some-useful-workflows" data-title="神器Alfred和更神的workflow" data-url="/%E5%B7%A5%E5%85%B7/2015/04/28/Alfred-and-some-useful-workflows/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"erythrome"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="p2 wrap">
+    <div class="measure mt1 center">
+      <small>
+        Megas Liu
+      </small>
+    </div>
+    <div class="measure mt1 center">
+      <small>
+        Powered By <a href="http://basscss.com">BASSCSS</a> |
+                   <a href="http://jekyllrb.com">Jekyll</a> |
+                   <a href="http://refills.bourbon.io/">Refills</a> |
+                   <a href="http://ethanschoonover.com/solarized">Solarized</a> |
+                   <a href="http://pixyll.com">Pixyll</a> |
+                   <a href="https://disqus.com">Disqus</a> 
+      </small>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

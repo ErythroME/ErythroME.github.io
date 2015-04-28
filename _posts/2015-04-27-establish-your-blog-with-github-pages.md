@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Windows下Github Pages搭建体验
-categories: Github Pages
+categories: 经验
 summary: Windows下Github Pages搭建体验
 ---
 

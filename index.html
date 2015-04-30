@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
 
-  <div class="posts">
+  <div class="posts container">
     {% for post in site.posts %}
       <div class="post">
         <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
@@ -20,5 +20,5 @@ layout: default
     {% endfor %}
   </div>
 
-  {% include pagination.html %}
+  <!-- {% include pagination.html %} -->
 </div>

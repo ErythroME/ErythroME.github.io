@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Windows下Github Pages搭建体验
-categories: 经验
+category: 经验
+tags: [github-pages, windows, jekyll]
 summary: Windows下Github Pages搭建体验
 ---
 

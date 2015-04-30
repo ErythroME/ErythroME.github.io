@@ -3,7 +3,7 @@ author:      Megas
 name:        Liu Yinian
 email:       megas.nmsis@hotmail.com
 github:      ErythroME
-permalink:   /:year/:month/:day/:title
+permalink:   /:category/:year/:month/:day/:title
 baseurl:     ""
 url:         "http://erythrome.github.io"
 

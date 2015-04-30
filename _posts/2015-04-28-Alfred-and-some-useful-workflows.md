@@ -1,7 +1,8 @@
 ---
 layout: post
 title: 神器Alfred和更神的workflow
-categories: 工具
+category: 工具
+tags: [alfred, workflow]
 summary: 虽然在Mac下Spotlight有很多强大的功能，但与Alfred相比还是略有欠缺。而武装各式workflow后Alfred堪称神兵利器~
 ---
 ####Spotlight与Alfred

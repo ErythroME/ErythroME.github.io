@@ -1,11 +1,12 @@
 ---
 layout: post
 title: Python脚本批量删除特定后缀名的文件
+category: python
+tags: [python, scripts]
 summary: Python脚本批量删除特定后缀名的文件
 ---
-<!-- <h2 id="id_article_title">{{ page.title }}</h2>
-<h4 id="id_article_date"><small>{{ page.date | date_to_string }}</small></h4> -->
-<p id="id_article_text">最近在学编译原理，写词法分析器的过程中，发现了一个问题：目录下每个c文件编译运行后会生成.o和.exe文件，再加上编译器备份时生成的bak文件，造成文件十分繁杂。轻微强迫症的我表示不能忍，正好前段时间学了Python，于是用Python写了一个脚本来批量删除多余文件。</p>
+
+<p id="id_article_text">最近在学编译原理，写词法分析器的过程中，发现了一个问题：目录下每个cPython文件编译运行后会生成.o和.exe文件，再加上编译器备份时生成的bak文件，造成文件十分繁杂。轻微强迫症的我表示不能忍，正好前段时间学了Python，于是用Python写了一个脚本来批量删除多余文件。</p>
 <pre id="id_article_code">
 {% highlight python %}
 import os

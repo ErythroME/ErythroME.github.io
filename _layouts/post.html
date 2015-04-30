@@ -6,17 +6,52 @@ layout: default
 {% if minutes == 0 %}
 {% assign minutes = 1 %}
 {% endif %}
+{% assign post = page %}
 
 <div class="post-header mb3">
   <h3>{{ page.title }}</h3>
-  <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span><br>
+  <span class="inline">
+  <span class="post-meta post-date">{{ page.date | date: "%b %-d, %Y" }}</span>
   {% if page.update_date %}
-    <span class="post-meta">Updated: {{ page.update_date | date: "%b %-d, %Y" }}</span><br>
+    <span class="post-meta post-updated">Updated: {{ page.update_date | date: "%b %-d, %Y" }}</span><br>
   {% endif %}
-  <span class="post-meta small">{{ minutes }} minute read</span>
+
+  {% if post.category %}
+      {% for site_category in site.data.categories %}
+          {% if site_category.slug == post.category %}
+              {% assign category = site_category %}
+          {% endif %}
+      {% endfor %}
+      {% if category %}
+          {% capture category_content %}<i class="fa fa-book">: <span class="category_label" style="background: {{ category.color }}"><a href="/blog/category/{{ category.slug }}/">{{ category.name }}</a></span></i>{% endcapture %}
+      {% endif %}
+  {% else %}
+      {% assign category_content = '' %}
+  {% endif %}
+
+  {% if post.tags.size > 0 %}
+      {% capture tags_content %} &nbsp;&nbsp;&nbsp;{% if post.tags.size == 1 %}<i class="fa fa-tag"></i>: {% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
+      {% for post_tag in post.tags %}
+          {% for data_tag in site.data.tags %}
+              {% if data_tag.slug == post_tag %}
+                  {% assign tag = data_tag %}
+              {% endif %}
+          {% endfor %}
+          {% if tag %}
+              {% capture tags_content_temp %}{{ tags_content }}<span class="tag_label"><a href="/blog/tag/{{ tag.slug }}/">{{ tag.name }}</a></span>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+              {% assign tags_content = tags_content_temp %}
+          {% endif %}
+      {% endfor %}
+  {% else %}
+      {% assign tags_content = '' %}
+  {% endif %}
+
+  <span class="post-meta post-category-and-tag">{{ category_content }}{{ tags_content }}</span>
+  </span>
+  </br>
 </div>
 
-<article class="post-content">
+<article class="post-content container">
   {{ content }}
 </article>
 

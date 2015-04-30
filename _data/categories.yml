@@ -1,0 +1,11 @@
+- slug: 工具
+  name: 工具
+  color: '#389cc2'
+
+- slug: 经验
+  name: 经验
+  color: '#2a6fb0'
+
+- slug: python
+  name: Python
+  color: '#5c5ea2'

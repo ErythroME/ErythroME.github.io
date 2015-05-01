@@ -59,7 +59,7 @@ body {
 }
 
 .site-header {
-  background: url(../images/background2.jpg) repeat-x;
+  background: url(../images/background.jpg) repeat-x;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -279,6 +279,18 @@ abbr {
   cursor: help;
 }
 
+.command {
+  background: #333333;
+  padding: 0.1rem 0.3rem 0.1rem 0.3rem;
+  border-radius: 5px;
+}
+
+.command span {
+  color: #e7eef8;
+  font-size: 1.0rem;
+  font-style: italic;
+}
+
 pre, code {
   font-family: '微软雅黑', 'Arial', Menlo, Monaco, "Courier New", monospace
 }
@@ -298,6 +310,26 @@ pre {
 .highlight .p {
   font-size: 1.125rem;
   line-height: 1;
+}
+
+#back-to-top a {
+  position: fixed;
+  bottom: 2rem; /* 小按钮到浏览器底边的距离 */
+  right: 2rem; /* 小按钮到浏览器右边框的距离 */
+  color: #333; /* 小按钮中文字的颜色 */
+  z-index: 1000;
+  background: #cfcfcf; /* 小按钮底色 */
+  padding: 10px; /* 小按钮中文字到按钮边缘的距离 */
+  border-radius: 4px; /* 小按钮圆角的弯曲程度（半径）*/
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  font-weight: normal; /* 小按钮中文字的粗细 */
+  text-decoration: none !important;
+}
+
+#back-to-top a:hover{
+  background: #333; /* 小按钮的底色 */
+  color: #fff; /* 文字颜色 */
 }
 
 blockquote {

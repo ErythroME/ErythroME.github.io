@@ -221,18 +221,18 @@
 <p><em>Step 3:</em> 依照<a href="https://help.github.com/articles/using-jekyll-with-pages/">官方说明</a>，安装bundle。之后的步骤在cmd中进行：</p>
 
 <ol>
-<li>ruby &ndash;version 查看ruby版本号。如果未安装ruby则需先安装ruby。推荐使用<a href="http://railsinstaller.org/en">Railsinstaller</a>，非常快捷简便。</li>
+<li><span class="command"><span>ruby &ndash;version</span></span> 查看ruby版本号。如果未安装ruby则需先安装ruby。推荐使用<a href="http://railsinstaller.org/en">Railsinstaller</a>，非常快捷简便。</li>
 <li><p>运行
-gem install bundler</p></li>
+<span class="command"><span>gem install bundler</span></span></p></li>
 <li><p>在项目目录中新建名为Gemfile的文件，不加后缀名。</p></li>
+<li><p>运行</br>
+<span class="command"><span>source &lsquo;https//rubygems.org&rsquo;</span></span> </br>
+<span class="command"><span>gem &#39;github-pages&rsquo;</span></span></p></li>
 <li><p>运行
-source &lsquo;https//rubygems.org&rsquo;
-gem &#39;github-pages&rsquo;</p></li>
-<li><p>运行
-bundle install<br>
+<span class="command"><span>bundle install</span></span><br>
 如果出现DL开头的两行报错信息，这相当于Warning，可以不管。如果最终提示未安装成功，可以多试几次。</p></li>
 <li><p>运行
-bundle exec jekyll serve<br>
+<span class="command"><span>bundle exec jekyll serve</span></span> 
 该命令用来启动jekyll server。在浏览器中输入localhost:4000，可以看到博客的index页面。cmd中输入ctrl+c，则可关闭server。运行jekyll server相当于在本地预览效果，之后对博客进行修改或发布博文时可以先在本地随时预览效果。</p></li>
 <li><p>参照<a href="http://justcoding.iteye.com/blog/1959737">这篇文章</a>中有关目录结构的部分建立目录结构。</p></li>
 <li><p>参照<a href="http://www.cnblogs.com/purediy/archive/2013/03/07/2948892.html">这篇文章</a>中配置_config.yml文件的方法进行个人设置。</p></li>
@@ -284,6 +284,8 @@ bundle exec jekyll serve<br>
 <!--  -->
 
 
+
+<div id="back-to-top"><a href="#">^</a></div>
 
       </div>
     </div>

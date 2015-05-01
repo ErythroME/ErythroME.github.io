@@ -29,20 +29,20 @@ summary: Windows下Github Pages搭建体验
 
 *Step 3:* 依照[官方说明](https://help.github.com/articles/using-jekyll-with-pages/)，安装bundle。之后的步骤在cmd中进行：
 
-1. ruby --version 查看ruby版本号。如果未安装ruby则需先安装ruby。推荐使用[Railsinstaller](http://railsinstaller.org/en)，非常快捷简便。
+1. <span class="command"><span>ruby --version</span></span> 查看ruby版本号。如果未安装ruby则需先安装ruby。推荐使用[Railsinstaller](http://railsinstaller.org/en)，非常快捷简便。
 2. 运行
-   gem install bundler
+   <span class="command"><span>gem install bundler</span></span>
    
 3. 在项目目录中新建名为Gemfile的文件，不加后缀名。
-4. 运行
-   source 'https//rubygems.org'
-   gem 'github-pages'
+4. 运行</br>
+   <span class="command"><span>source 'https//rubygems.org'</span></span> </br>
+   <span class="command"><span>gem 'github-pages'</span></span>
     
 5. 运行
-   bundle install  
+   <span class="command"><span>bundle install</span></span>  
 如果出现DL开头的两行报错信息，这相当于Warning，可以不管。如果最终提示未安装成功，可以多试几次。
 6. 运行
-   bundle exec jekyll serve  
+   <span class="command"><span>bundle exec jekyll serve</span></span> 
    该命令用来启动jekyll server。在浏览器中输入localhost:4000，可以看到博客的index页面。cmd中输入ctrl+c，则可关闭server。运行jekyll server相当于在本地预览效果，之后对博客进行修改或发布博文时可以先在本地随时预览效果。
    
 7. 参照[这篇文章](http://justcoding.iteye.com/blog/1959737)中有关目录结构的部分建立目录结构。

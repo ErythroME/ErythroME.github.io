@@ -511,18 +511,6 @@ h6,
   border-bottom: 1px solid #f8d46e;
 }
 
-@media screen and (max-width: 52em) {
-  .category-container {
-    width: 45%;
-    float: left;
-  }
-
-  .tag-container {
-    width: 45%;
-    float: left;
-  }
-}
-
 @media screen and (min-width: 48em) {
   .site-header .site-title {
     float: left;
@@ -650,11 +638,25 @@ h6,
   }
 
   .category-container {
+    width: 45%;
+    height: auto;
+  }
+
+  .tag-container {
+    width: 45%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 30em) {
+  .category-container {
     width: 90%;
+    float: left;
   }
 
   .tag-container {
     width: 90%;
+    float: left;
   }
 }
 

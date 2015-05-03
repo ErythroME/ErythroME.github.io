@@ -636,6 +636,26 @@ h6,
   .container {
     width: 100%;
   }
+
+  .category-container {
+    width: 90%;
+  }
+
+  .tag-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 52em) {
+  .category-container {
+    width: 45%;
+    float: left;
+  }
+
+  .tag-container {
+    width: 45%;
+    float: left;
+  }
 }
 
 @media screen and (min-width: 64em) {

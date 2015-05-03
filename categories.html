@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<header id="post-header" style="text-align: center">
+    <h1 id="post-title">Categories</h1>
+</header>
+
+<div id="post-content">
+	<div class="category">
+    {% for category in site.categories %} 
+    	<div class="category-container">
+    		<div class="category-title">
+    			<a>{{ category | first }}</a>
+    		</div>
+    		<div class="category-post-num">
+    			<span>共{{ category | last | size }}篇</span>
+    		</div>
+    		<div class="category-post">
+    		{% for post in site.posts %}
+    			{% capture category_name %}{{ category | first }}{% endcapture %}
+            	{% if post.category == category_name %}
+            		<a href="{{ post.url | prepend: site.baseurl }}" class="post-link category-post-item"><span>{{ post.title }}</span></a>
+            	{% endif %}
+        	{% endfor %} 
+        	</div>
+    	</div>
+    {% endfor %}
+    </div>
+</div>

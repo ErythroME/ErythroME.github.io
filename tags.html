@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<header id="post-header" style="text-align: center">
+    <h1 id="post-title">Tags</h1>
+</header>
+
+<div id="post-content">
+	<div class="tag">
+    {% for tag in site.tags %} 
+    	<div class="tag-container">
+    		<div class="tag-title">
+    			<a>{{ tag | first }}</a>
+    		</div>
+    		<div class="tag-post-num">
+    			<span>共{{ tag | last | size }}篇</span>
+    		</div>
+    		<div class="tag-post">
+    		{% for post in site.posts %}
+                {% for post_tag in post.tags %}
+                    {% capture tag_name %}{{ tag | first }}{% endcapture %}
+                    {% if tag_name == post_tag %}
+                        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link tag-post-item"><span>{{ post.title }}</span></a>
+                    {% endif %}
+                {% endfor %}
+        	{% endfor %} 
+        	</div>
+    	</div>
+    {% endfor %}
+    </div>
+</div>

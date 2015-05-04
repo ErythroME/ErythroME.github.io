@@ -30,7 +30,7 @@ summary: 要搞一个炫酷的个人博客，搭建好Github Pages只是第一�
 ---
 ####修改Pixyll的配置信息
 
-在配置文件_config.yml中，将下面的代码修改为自己的信息：
+在配置文件\_config.yml中，将下面的代码修改为自己的信息：
 {% highlight yaml %}
 # Site settings
 title:       Pixyll
@@ -48,13 +48,13 @@ permalink: /:category/:year/:month/:day/:title
 接下来,
 
 * 开启页面浮现的动画效果：animated置为true
-* 可在每篇文章的末尾添加作者信息：将show_post_footers置为true
+* 可在每篇文章的末尾添加作者信息：将show\_post\_footers置为true
 
-    > 需要注意：如果show_post_footers设为true，则需要将    _include文件夹下的post_footer.html中的相应内容替换为自己的信息。
+    > 需要注意：如果show\_post\_footers设为true，则需要将\_include文件夹下的post\_footer.html中的相应内容替换为自己的信息。
 	
-* 在博客header内显示社交网络图标：show_social_icons置为true，并填写相应社交网络的用户名、id等信息
+* 在博客header内显示社交网络图标：show\_social\_icons置为true，并填写相应社交网络的用户名、id等信息
 
-配置文件_config.yml修改完毕后，运行 <span class="command"><span>jekyll serve</span></span> 会看到页面头部标题已经变成了自己在_config.yml中设置的title，nice~
+配置文件\_config.yml修改完毕后，运行 <span class="command"><span>jekyll serve</span></span> 会看到页面头部标题已经变成了自己在\_config.yml中设置的title，nice~
 
 ---
 ####修改Pixyll的基本信息

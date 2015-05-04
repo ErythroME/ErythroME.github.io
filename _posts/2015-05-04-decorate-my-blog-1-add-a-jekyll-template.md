@@ -23,7 +23,7 @@ summary: 要搞一个炫酷的个人博客，搭建好Github Pages只是第一�
 * 在本机的Github目录下运行 <span class="command"><span>git clone https://github.com/johnotander/pixyll.git</span></span> 将Pixyll clone下来。
 
 在将Pixyll中的内容复制到我们的博客目录前，先来看一下Pixyll中原本都有些什么内容：
-![Pixyll 目录](/images/decorateMyBlog1st1.png)
+![Pixyll 目录](http://7xit9q.com1.z0.glb.clouddn.com/decorateMyBlog1st1.png)
 
 * 大体了解以后在命令行中运行 <span class="command"><span>cp -r pixyll/ Mixyll</span></span> 将pixyll目录下的所有文件复制到博客目录中（我的目录名称为Mixyll）。
 
@@ -74,6 +74,6 @@ permalink: /:category/:year/:month/:day/:title
 
 > <strong>运行 <span class="command"><span>git commit -m 'rebuild pages' --allow-empty</span></span> 来强制github pages rebuild</strong>
 
-刷新后顿时![有意思~](/images/decorateMyBlog1st2.jpg)~
+刷新后顿时![有意思~](http://7xit9q.com1.z0.glb.clouddn.com/decorateMyBlog1st2.jpg)~
 
 

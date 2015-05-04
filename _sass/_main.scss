@@ -292,7 +292,7 @@ abbr {
 }
 
 pre, code {
-  font-family: '微软雅黑', 'Arial', Menlo, Monaco, "Courier New", monospace
+  font-family: Menlo, Monaco, '微软雅黑', 'Arial', "Courier New", monospace
 }
 
 code {
@@ -387,13 +387,13 @@ h6,
   padding: 0 0.2rem 0.1rem 0.2rem;
 }
 
-.category_label a {
+.category_label>a {
   text-decoration: none;
   color: #ffffff;
   font-style: italic;
   font-size: 0.9rem;
   line-height: 0.9rem;
-  font-weigth: 700;
+  font-weight: 700;
 }
 
 .tag_label {

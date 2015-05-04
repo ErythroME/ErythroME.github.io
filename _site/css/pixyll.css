@@ -834,7 +834,7 @@ abbr {
   font-style: italic; }
 
 pre, code {
-  font-family: "微软雅黑", "Arial", Menlo, Monaco, "Courier New", monospace; }
+  font-family: Menlo, Monaco, "微软雅黑", "Arial", "Courier New", monospace; }
 
 code {
   color: #7a7a7a; }
@@ -927,13 +927,13 @@ h6,
   border-radius: 4px;
   padding: 0 0.2rem 0.1rem 0.2rem; }
 
-.category_label a {
+.category_label > a {
   text-decoration: none;
   color: #ffffff;
   font-style: italic;
   font-size: 0.9rem;
   line-height: 0.9rem;
-  font-weigth: 700; }
+  font-weight: 700; }
 
 .tag_label {
   border-bottom: 2px inset #196dcf; }
@@ -1134,20 +1134,20 @@ h6,
     width: 100%; }
 
   .category-container {
-    width: 45%;
-    height: auto; }
+    width: 45%; }
 
   .tag-container {
-    width: 45%;
-    height: auto; } }
+    width: 45%; } }
 @media screen and (max-width: 30em) {
   .category-container {
     width: 90%;
-    float: left; }
+    float: left;
+    height: 45%; }
 
   .tag-container {
     width: 90%;
-    float: left; } }
+    float: left;
+    height: 45%; } }
 @media screen and (min-width: 64em) {
   .h1,
   h1 {

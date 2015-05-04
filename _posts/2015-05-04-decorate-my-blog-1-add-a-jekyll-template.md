@@ -63,7 +63,7 @@ permalink: /:category/:year/:month/:day/:title
 
 * about.md
 * footer.html (_includes内)
-* post_footer.html  (_includes内)
+* post\_footer.html  (\_includes内)
 
 分别将其修改为自己的信息，不要忘记感谢模板的原作者哟~
 

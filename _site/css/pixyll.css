@@ -1125,7 +1125,8 @@ h6,
     text-align: center; }
 
   .site-header .site-title {
-    float: center; }
+    float: center;
+    font-weight: 700; }
 
   .site-header .site-nav {
     width: 100%;

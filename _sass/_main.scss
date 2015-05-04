@@ -283,6 +283,7 @@ abbr {
   background: #333333;
   padding: 0.1rem 0.3rem 0.1rem 0.3rem;
   border-radius: 5px;
+  overflow-x: scroll;
 }
 
 .command span {
@@ -312,10 +313,10 @@ pre {
   line-height: 1;
 }
 
-#back-to-top a {
+.top a {
   position: fixed;
-  bottom: 2rem; /* 小按钮到浏览器底边的距离 */
-  right: 2rem; /* 小按钮到浏览器右边框的距离 */
+  bottom: 0px; /* 小按钮到浏览器底边的距离 */
+  right: 50px; /* 小按钮到浏览器右边框的距离 */
   color: #333; /* 小按钮中文字的颜色 */
   z-index: 1000;
   background: #cfcfcf; /* 小按钮底色 */
@@ -327,9 +328,26 @@ pre {
   text-decoration: none !important;
 }
 
-#back-to-top a:hover{
+.top a:hover {
   background: #333; /* 小按钮的底色 */
   color: #fff; /* 文字颜色 */
+}
+
+.back-to-top {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+}
+
+.back-to-top a {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  background: #000000;
+  z-index: 999999;
 }
 
 blockquote {
@@ -389,11 +407,11 @@ h6,
 
 .category_label>a {
   text-decoration: none;
-  color: #ffffff;
-  font-style: italic;
+  color: #000000;
+  font-style: normal;
   font-size: 0.9rem;
   line-height: 0.9rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .tag_label {

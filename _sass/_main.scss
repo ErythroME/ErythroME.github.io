@@ -77,7 +77,7 @@ body {
   font-size: 1rem;
   color: #666;
 }
-
+ƒ
 .site-header nav a:hover {
   color: #444;
   opacity: 1;
@@ -315,39 +315,23 @@ pre {
 
 .top a {
   position: fixed;
-  bottom: 0px; /* 小按钮到浏览器底边的距离 */
-  right: 50px; /* 小按钮到浏览器右边框的距离 */
-  color: #333; /* 小按钮中文字的颜色 */
+  bottom: 2.0rem; 
+  right: 3.0rem; 
+  font-size: 1.0rem;
+  color: #333;
   z-index: 1000;
-  background: #cfcfcf; /* 小按钮底色 */
-  padding: 10px; /* 小按钮中文字到按钮边缘的距离 */
-  border-radius: 4px; /* 小按钮圆角的弯曲程度（半径）*/
+  background: #cfcfcf; 
+  padding: 0.3rem 0.7rem 0.3rem 0.7rem; 
+  border-radius: 4px; 
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  font-weight: normal; /* 小按钮中文字的粗细 */
+  font-weight: normal; 
   text-decoration: none !important;
 }
 
 .top a:hover {
-  background: #333; /* 小按钮的底色 */
-  color: #fff; /* 文字颜色 */
-}
-
-.back-to-top {
-  display: block;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 100px;
-}
-
-.back-to-top a {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 100px;
-  background: #000000;
-  z-index: 999999;
+  background: #333; 
+  color: #fff; 
 }
 
 blockquote {

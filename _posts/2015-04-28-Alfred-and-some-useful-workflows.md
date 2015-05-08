@@ -32,13 +32,13 @@ Snippets功能非常简单，不过用了才发现，小小功能省不少事哟
 
 由于我是VPN重度用户——每天打开电脑第一件事就是开VPN，这个workflow对我来讲堪称神器。VPN Toogle用来自由开关VPN，或者在多个VPN代理之间切换。我个人用的是[云梯VPN](http://opticalvpn.com/?r=e4898da811f3c34e)（这是我的链接），感觉切换起来很方便，也有多种选择，比一些免费VPN要稳定。
 
-![VPN Togglehttp://7xit9q.com1.z0.glb.clouddn.com/AlfredAndSomeUsefulWorkflowsImage4.png)
+![VPN Toggle]http://7xit9q.com1.z0.glb.clouddn.com/AlfredAndSomeUsefulWorkflowsImage4.png)
 
 #####[Kill Process](https://github.com/nathangreenstein/alfred-process-killer)
 
 这个Workflow用来关掉进程，当然也能关闭应用。由于Mac下点击左上角的红色关闭按钮仅仅是关闭了窗口，并未关闭进程，有时感觉会有不便。导入这个workflow之后只需唤起Alfred，输入kill+应用名称（或进程名），即可将其关闭，十分简捷。
 
-![Kill Processhttp://7xit9q.com1.z0.glb.clouddn.com/AlfredAndSomeUsefulWorkflowsImage5.png)
+![Kill Process]http://7xit9q.com1.z0.glb.clouddn.com/AlfredAndSomeUsefulWorkflowsImage5.png)
 
 #####[HTTP codes](https://github.com/JoelQ/alfred-http)
 

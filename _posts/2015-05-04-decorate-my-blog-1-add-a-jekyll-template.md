@@ -1,19 +1,20 @@
 ---
 layout: post
-title: 博客装修记(1)——添加一个Jekyll模板
+title: 博客装修记(1)——添加一个Jekyll主题
+updated: 2015-05-17
 category: 博客装修记
 tags: [github-pages, jekyll]
-summary: 要搞一个炫酷的个人博客，搭建好Github Pages只是第一步，接下来就要引入一个Jekyll模板。我选择的模板是Pixyll
+summary: 要搞一个炫酷的个人博客，搭建好Github Pages只是第一步，接下来就要引入一个Jekyll主题。我选择的主题是Pixyll
 ---
 
-####为什么要选择模板
+####为什么要选择主题
 因为懒TAT。
 
-首先，刚接触Jekyll时，引入模板可以让我们快速地了解Jekyll。模板的目录结构及参考代码一般都比较工整，值得参考。其次，对于广大程序猿来说，辛苦手写的页面很容易丑到掉渣，引入模板之后再根据自己的心意修改更为便捷。
+首先，刚接触Jekyll时，引入主题可以让我们快速地了解Jekyll。模板的目录结构及参考代码一般都比较工整，值得参考。其次，对于广大程序猿来说，辛苦手写的页面很容易丑到掉渣，引入模板之后再根据自己的心意修改更为便捷。
 
-在[Jekyll Themes](http://jekyllthemes.org)上有一些简单的模板，我选择了[Pixyll](https://github.com/johnotander/pixyll)。看着太简单？简单才有修改的空间嘛~
+在[Jekyll Themes](http://jekyllthemes.org)上有一些简单的主题，我选择了[Pixyll](https://github.com/johnotander/pixyll)。看着太简单？简单才有修改的空间嘛~
 
-为了再现我的博客装修过程，我在Github上新建了一个Jekyll模板项目：[Mixyll](https://github.com/ErythroME/Mixyll)。
+为了再现我的博客装修过程，我在Github上新建了一个Jekyll主题项目：[Mixyll](https://github.com/ErythroME/Mixyll)。
 
 ---
 ####引入Pixyll
@@ -68,7 +69,7 @@ permalink: /:category/:year/:month/:day/:title
 分别将其修改为自己的信息，不要忘记感谢模板的原作者哟~
 
 ---
-至此，模板的基本信息修改完成，在本地运行jekyll没有报错的话就可以提交了。
+至此，主题的基本信息修改完成，在本地运行jekyll没有报错的话就可以提交了。
 
 将修改的内容push后，你会看到修改完成的页面；如果没看到，可以稍等几分钟；如果等了半天也没看到……duang duang duang
 

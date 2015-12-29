@@ -95,7 +95,7 @@ layout: default
 {% endraw %}
 ```
 
-*Step3:* 回到\_layouts目录下的post.html中，在Step 1中新添代码之后再添加如下代码：
+*Step3:* 回到\_layouts目录下的post.html中，在Step1中新添代码之后再添加如下代码：
 
 ```html
 {% raw %}
@@ -106,7 +106,7 @@ layout: default
 这样，博文中就有了显示分类的功能。可喜可贺～
 可是机智如你发现问题又来了：分类可以显示，但没法设定啊(´･_･`)，所以我们需要继续设置分类名称。
 
-*Step4:* 新建名为blog的目录，在其中新建Category目录。该目录中存放所有分类。对每一个分类都要新建一个md文件，文件名称即为你想要的分类名称（比如我们要建一个名为“绅♂士♂”的分类），文件内容如下：
+*Step4:* 新建名为blog的目录，在其中新建category目录。该目录中存放所有分类。对每一个分类都要新建一个md文件，文件名称即为你想要的分类名称（比如我们要建一个名为“绅♂士♂”的分类），文件内容如下：
 
 ```html
 ---
@@ -127,8 +127,112 @@ category: 绅♂士♂
 ---
 ```
 
-至此，终于完成了为文章设定分类的任务。
+至此，终于完成了为文章设定分类的任务~
 
+#####标签Tag
+
+标签的设定与分类极为相似。
+
+*Step1:* 在添加分类的Step1中添加的代码之后新增如下代码：
+
+```html
+{% raw %}
+{% if post.tags.size > 0 %}
+      {% capture tags_content %} &nbsp;&nbsp;&nbsp;{% if post.tags.size == 1 %}<i class="fa fa-tag"></i>: {% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
+      {% for post_tag in post.tags %}
+          {% for data_tag in site.data.tags %}
+              {% if data_tag.slug == post_tag %}
+                  {% assign tag = data_tag %}
+              {% endif %}
+          {% endfor %}
+          {% if tag %}
+              {% capture tags_content_temp %}{{ tags_content }}<span class="tag_label"><a href="/blog/tag/{{ tag.slug }}/">{{ tag.name }}</a></span>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+              {% assign tags_content = tags_content_temp %}
+          {% endif %}
+      {% endfor %}
+  {% else %}
+      {% assign tags_content = '' %}
+  {% endif %}
+{& endraw &}
+```
+
+*Step2:* 同样在\_layouts目录下新建一个名为blog_by_tag.html的模版文件，内容如下：
+
+```html
+{% raw %}
+---
+layout: default
+---
+
+<header id="post-header">
+    <h1 id="post-title">{{ page.title }}</h1>
+</header>
+
+<div id="post-content">
+    {% if site.tags[page.tag] %}
+        {% for post in site.tags[page.tag] %}
+            {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
+            {% if forloop.first %}
+                <h3>{{ post_year }}</h3><div class="list-group">
+            {% endif %}
+			
+            {% if forloop.first == false %}
+                {% assign previous_index = forloop.index0 | minus: 1 %}
+                {% capture previous_post_year %}{{ site.tags[page.tag][previous_index].date | date: '%Y' }}{% endcapture %}
+                {% if post_year != previous_post_year %}
+                    </div><h3>{{ post_year }}</h3><div class="list-group">
+                {% endif %}
+            {% endif %}
+			
+            <a href="{{ post.url }}/" class="list-group-item">
+                <h4 class="list-group-item-heading">{{ post.title }}</h4>
+            </a>
+
+            {% if forloop.last %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <p>该标签下暂无文章.</p>
+    {% endif %}
+</div>
+{% endraw %}
+```
+
+*Step3:* 将添加分类的Step3中新增的代码改为
+
+```html
+{% raw %}
+  <span class="post-meta post-category-and-tag">{{ category_content }}{{ tags_content }}</span>
+{% endraw %}
+```
+
+*Step4:* 在blog目录中新建tag目录，该目录中存放所有标签。对每一个标签都要新建一个html文件，文件名称即为你想要的标签名称（比如我们要建一个名为“比利”的标签），文件内容如下：
+
+```html
+---
+layout: blog_by_tag
+title: 比利
+category: 比利
+permalink: /blog/tag/比利/
+---
+```
+
+*Step5:* 对于每一篇博文，文章头部增加tags字段，例如：
+
+```html
+---
+layout: post
+title: 论比利王对哲学的改革
+category: 绅♂士♂
+tags: [比利, 哲学]
+---
+```
+
+注意每篇文章的分类category只有一个，而标签tags则有多个哟～
+
+---
+呼～为文章添加分类和标签到此基本完成，如果还有疑惑，欢迎查看本教练的代码实现或给我留言～
 
 
 

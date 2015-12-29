@@ -51,7 +51,7 @@ summary: 简单的博客搭建完成，可以开始写文章啦~可是纵观整�
 {% endraw %}
 ```
 
-*Step 2:* 在\_layouts目录下新建一个名为blog_by_category.html的模版文件，内容如下：
+*Step 2:* 在\_layouts目录下新建一个名为blog\_by\_category.html的模版文件，内容如下：
 
 ```html
 {% raw %}
@@ -127,7 +127,14 @@ category: 绅♂士♂
 ---
 ```
 
-至此，终于完成了为文章设定分类的任务~
+*Step6:* 要将文章对分类的设定与其真正的分类联系起来，还需要在项目目录中新建\_data目录，并在其中新建名为categories的yml文件，每新增一种分类，就需要在该文件中添加如下代码：
+
+```html
+- slug: 绅♂士♂
+  name: 绅♂士♂
+  color: '#94BFDA'
+```
+其中的color字段对应Step1中对category背景颜色的设定，可以不设置。
 
 #####标签Tag
 
@@ -153,10 +160,10 @@ category: 绅♂士♂
   {% else %}
       {% assign tags_content = '' %}
   {% endif %}
-{& endraw &}
+{% endraw %}
 ```
 
-*Step2:* 同样在\_layouts目录下新建一个名为blog_by_tag.html的模版文件，内容如下：
+*Step2:* 同样在\_layouts目录下新建一个名为blog\_by\_tag.html的模版文件，内容如下：
 
 ```html
 {% raw %}
@@ -229,10 +236,17 @@ tags: [比利, 哲学]
 ---
 ```
 
+*Step6:* 同样在\_data目录中新建名为tags的yml文件。每添加一种标签，就在该文件中对应添加：
+
+```html
+- slug: 比利
+  name: 比利 
+```
+
 注意每篇文章的分类category只有一个，而标签tags则有多个哟～
 
 ---
-呼～为文章添加分类和标签到此基本完成，如果还有疑惑，欢迎查看本教练的代码实现或给我留言～
+呼～为文章添加分类和标签到此基本完成，如果还有疑惑，欢迎查看本教练的[代码实现](https://github.com/ErythroME/ErythroME.github.io)或给我留言～
 
 
 

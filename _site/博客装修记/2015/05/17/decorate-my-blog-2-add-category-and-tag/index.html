@@ -89,69 +89,7 @@
   
 
   
-      
-          
-      
-          
-      
-          
-      
-          
-              
-          
-      
-      
-          
-      
-  
 
-  
-      
-      
-          
-              
-                  
-              
-          
-              
-          
-              
-          
-              
-          
-              
-          
-              
-          
-              
-          
-          
-              
-              
-          
-      
-          
-              
-          
-              
-          
-              
-                  
-              
-          
-              
-          
-              
-          
-              
-          
-              
-          
-          
-              
-              
-          
-      
   
 
   <span class="post-meta post-category-and-tag"><i class="fa fa-book">: <span class="category_label" style="background: #BCC4EE"><a href="/blog/category/博客装修记/">博客装修记</a></span></i> &nbsp;&nbsp;&nbsp;<i class="fa fa-tags"></i>: <span class="tag_label"><a href="/blog/tag/github-pages/">Github Pages</a></span>, <span class="tag_label"><a href="/blog/tag/jekyll/">jekyll</a></span></span>
@@ -189,52 +127,57 @@
 <h5 id="分类category">分类Category</h5>
 
 <p><em>Step 1:</em> 在_layouts目录下的post.html中,</p>
-<div class="highlight"><pre><code class="language-html" data-lang="html">{% if page.update_date %}
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;post-meta post-updated&quot;</span><span class="nt">&gt;</span>Updated: {{ page.update_date | date: &quot;%b %-d, %Y&quot; }}<span class="nt">&lt;/span&gt;&lt;br&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html">
+{% if page.update_date %}
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"post-meta post-updated"</span><span class="nt">&gt;</span>Updated: {{ page.update_date | date: "%b %-d, %Y" }}<span class="nt">&lt;/span&gt;&lt;br&gt;</span>
 {% endif %}
+
 </code></pre></div>
 <p>这段代码后添加如下代码</p>
-<div class="highlight"><pre><code class="language-html" data-lang="html">{% if post.category %}
+<div class="highlight"><pre><code class="language-html" data-lang="html">
+{% if post.category %}
       {% for site_category in site.data.categories %}
           {% if site_category.slug == post.category %}
               {% assign category = site_category %}
           {% endif %}
       {% endfor %}
       {% if category %}
-          {% capture category_content %}<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-book&quot;</span><span class="nt">&gt;</span>: <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;category_label&quot;</span> <span class="na">style=</span><span class="s">&quot;background: {{ category.color }}&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/blog/category/{{ category.slug }}/&quot;</span><span class="nt">&gt;</span>{{ category.name }}<span class="nt">&lt;/a&gt;&lt;/span&gt;&lt;/i&gt;</span>{% endcapture %}
+          {% capture category_content %}<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-book"</span><span class="nt">&gt;</span>: <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"category_label"</span> <span class="na">style=</span><span class="s">"background: {{ category.color }}"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/blog/category/{{ category.slug }}/"</span><span class="nt">&gt;</span>{{ category.name }}<span class="nt">&lt;/a&gt;&lt;/span&gt;&lt;/i&gt;</span>{% endcapture %}
       {% endif %}
   {% else %}
-      {% assign category_content = &#39;&#39; %}
+      {% assign category_content = '' %}
   {% endif %}
+
 </code></pre></div>
-<p><em>Step 2:</em> 在_layouts目录下新建一个名为blog<em>by</em>category.html的模版文件，内容如下：</p>
-<div class="highlight"><pre><code class="language-html" data-lang="html">---
+<p><em>Step 2:</em> 在_layouts目录下新建一个名为blog_by_category.html的模版文件，内容如下：</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">
+---
 layout: default
 ---
 
-<span class="nt">&lt;span</span> <span class="na">style=</span><span class="s">&quot;width: 100px; height: 100px; background: #000000;&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-<span class="nt">&lt;header</span> <span class="na">id=</span><span class="s">&quot;post-header&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">&quot;post-title&quot;</span><span class="nt">&gt;</span>{{ page.title }}<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">style=</span><span class="s">"width: 100px; height: 100px; background: #000000;"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;header</span> <span class="na">id=</span><span class="s">"post-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"post-title"</span><span class="nt">&gt;</span>{{ page.title }}<span class="nt">&lt;/h1&gt;</span>
 <span class="nt">&lt;/header&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;post-content&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"post-content"</span><span class="nt">&gt;</span>
     {% if site.categories[page.category] %}
         {% for post in site.categories[page.category] %}
-            {% capture post_year %}{{ post.date | date: &#39;%Y&#39; }}{% endcapture %}
+            {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
             {% if forloop.first %}
-                <span class="nt">&lt;h3&gt;</span>{{ post_year }}<span class="nt">&lt;/h3&gt;&lt;div</span> <span class="na">class=</span><span class="s">&quot;list-group&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h3&gt;</span>{{ post_year }}<span class="nt">&lt;/h3&gt;&lt;div</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
             {% endif %}
 
             {% if forloop.first == false %}
                 {% assign previous_index = forloop.index0 | minus: 1 %}
-                {% capture previous_post_year %}{{ site.categories[page.category][previous_index].date | date: &#39;%Y&#39; }}{% endcapture %}
+                {% capture previous_post_year %}{{ site.categories[page.category][previous_index].date | date: '%Y' }}{% endcapture %}
                 {% if post_year != previous_post_year %}
-                    <span class="nt">&lt;/div&gt;&lt;h3&gt;</span>{{ post_year }}<span class="nt">&lt;/h3&gt;&lt;div</span> <span class="na">class=</span><span class="s">&quot;list-group&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;/div&gt;&lt;h3&gt;</span>{{ post_year }}<span class="nt">&lt;/h3&gt;&lt;div</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
                 {% endif %}
             {% endif %}
 
-            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ post.url }}/&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;list-group-item-heading&quot;</span><span class="nt">&gt;</span>{{ post.title }}<span class="nt">&lt;/h4&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ post.url }}/"</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"list-group-item-heading"</span><span class="nt">&gt;</span>{{ post.title }}<span class="nt">&lt;/h4&gt;</span>
             <span class="nt">&lt;/a&gt;</span>
 
             {% if forloop.last %}
@@ -242,11 +185,135 @@ layout: default
             {% endif %}
         {% endfor %}
     {% else %}
-        <span class="nt">&lt;p&gt;</span>There are no posts in this category.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span>该分类下暂无文章.<span class="nt">&lt;/p&gt;</span>
     {% endif %}
 <span class="nt">&lt;/div&gt;</span>
+
 </code></pre></div>
-<p><em>Step3:</em> </p>
+<p><em>Step3:</em> 回到_layouts目录下的post.html中，在Step1中新添代码之后再添加如下代码：</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"post-meta post-category-and-tag"</span><span class="nt">&gt;</span>{{ category_content }}<span class="nt">&lt;/span&gt;</span>
+
+</code></pre></div>
+<p>这样，博文中就有了显示分类的功能。可喜可贺～
+可是机智如你发现问题又来了：分类可以显示，但没法设定啊(´･_･`)，所以我们需要继续设置分类名称。</p>
+
+<p><em>Step4:</em> 新建名为blog的目录，在其中新建category目录。该目录中存放所有分类。对每一个分类都要新建一个md文件，文件名称即为你想要的分类名称（比如我们要建一个名为“绅♂士♂”的分类），文件内容如下：</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: blog_by_category
+title: 绅♂士♂
+category: 绅♂士♂
+permalink: /blog/category/绅♂士♂/
+---
+</code></pre></div>
+<p><em>Step5:</em> 对于每一篇博文，文章头部增加category字段，例如：</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: post
+title: 论比利王对哲学的改革
+category: 绅♂士♂
+---
+</code></pre></div>
+<p><em>Step6:</em> 要将文章对分类的设定与其真正的分类联系起来，还需要在项目目录中新建_data目录，并在其中新建名为categories的yml文件，每新增一种分类，就需要在该文件中添加如下代码：</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">- slug: 绅♂士♂
+  name: 绅♂士♂
+  color: '#94BFDA'
+</code></pre></div>
+<p>其中的color字段对应Step1中对category背景颜色的设定，可以不设置。</p>
+
+<h5 id="标签tag">标签Tag</h5>
+
+<p>标签的设定与分类极为相似。</p>
+
+<p><em>Step1:</em> 在添加分类的Step1中添加的代码之后新增如下代码：</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">
+{% if post.tags.size &gt; 0 %}
+      {% capture tags_content %} <span class="ni">&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>{% if post.tags.size == 1 %}<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-tag"</span><span class="nt">&gt;&lt;/i&gt;</span>: {% else %}<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-tags"</span><span class="nt">&gt;&lt;/i&gt;</span>{% endif %}: {% endcapture %}
+      {% for post_tag in post.tags %}
+          {% for data_tag in site.data.tags %}
+              {% if data_tag.slug == post_tag %}
+                  {% assign tag = data_tag %}
+              {% endif %}
+          {% endfor %}
+          {% if tag %}
+              {% capture tags_content_temp %}{{ tags_content }}<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag_label"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/blog/tag/{{ tag.slug }}/"</span><span class="nt">&gt;</span>{{ tag.name }}<span class="nt">&lt;/a&gt;&lt;/span&gt;</span>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+              {% assign tags_content = tags_content_temp %}
+          {% endif %}
+      {% endfor %}
+  {% else %}
+      {% assign tags_content = '' %}
+  {% endif %}
+
+</code></pre></div>
+<p><em>Step2:</em> 同样在_layouts目录下新建一个名为blog_by_tag.html的模版文件，内容如下：</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">
+---
+layout: default
+---
+
+<span class="nt">&lt;header</span> <span class="na">id=</span><span class="s">"post-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"post-title"</span><span class="nt">&gt;</span>{{ page.title }}<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"post-content"</span><span class="nt">&gt;</span>
+    {% if site.tags[page.tag] %}
+        {% for post in site.tags[page.tag] %}
+            {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
+            {% if forloop.first %}
+                <span class="nt">&lt;h3&gt;</span>{{ post_year }}<span class="nt">&lt;/h3&gt;&lt;div</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
+            {% endif %}
+
+            {% if forloop.first == false %}
+                {% assign previous_index = forloop.index0 | minus: 1 %}
+                {% capture previous_post_year %}{{ site.tags[page.tag][previous_index].date | date: '%Y' }}{% endcapture %}
+                {% if post_year != previous_post_year %}
+                    <span class="nt">&lt;/div&gt;&lt;h3&gt;</span>{{ post_year }}<span class="nt">&lt;/h3&gt;&lt;div</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
+                {% endif %}
+            {% endif %}
+
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ post.url }}/"</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"list-group-item-heading"</span><span class="nt">&gt;</span>{{ post.title }}<span class="nt">&lt;/h4&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+
+            {% if forloop.last %}
+                <span class="nt">&lt;/div&gt;</span>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <span class="nt">&lt;p&gt;</span>该标签下暂无文章.<span class="nt">&lt;/p&gt;</span>
+    {% endif %}
+<span class="nt">&lt;/div&gt;</span>
+
+</code></pre></div>
+<p><em>Step3:</em> 将添加分类的Step3中新增的代码改为</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"post-meta post-category-and-tag"</span><span class="nt">&gt;</span>{{ category_content }}{{ tags_content }}<span class="nt">&lt;/span&gt;</span>
+
+</code></pre></div>
+<p><em>Step4:</em> 在blog目录中新建tag目录，该目录中存放所有标签。对每一个标签都要新建一个html文件，文件名称即为你想要的标签名称（比如我们要建一个名为“比利”的标签），文件内容如下：</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: blog_by_tag
+title: 比利
+category: 比利
+permalink: /blog/tag/比利/
+---
+</code></pre></div>
+<p><em>Step5:</em> 对于每一篇博文，文章头部增加tags字段，例如：</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: post
+title: 论比利王对哲学的改革
+category: 绅♂士♂
+tags: [比利, 哲学]
+---
+</code></pre></div>
+<p><em>Step6:</em> 同样在_data目录中新建名为tags的yml文件。每添加一种标签，就在该文件中对应添加：</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">- slug: 比利
+  name: 比利 
+</code></pre></div>
+<p>注意每篇文章的分类category只有一个，而标签tags则有多个哟～</p>
+
+<hr>
+
+<p>呼～为文章添加分类和标签到此基本完成，如果还有疑惑，欢迎查看本教练的<a href="https://github.com/ErythroME/ErythroME.github.io">代码实现</a>或给我留言～</p>
 
 </article>
 

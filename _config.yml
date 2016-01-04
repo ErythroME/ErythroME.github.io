@@ -58,4 +58,5 @@ sass:
 safe: false
 cdn_url: 
 
-exclude: [vendor]
+# Gems
+gems: [jekyll-paginate]

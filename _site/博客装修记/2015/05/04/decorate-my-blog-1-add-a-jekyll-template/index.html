@@ -82,8 +82,6 @@
 
 
 
-
-
 <div class="post-header mb3">
   <h3>博客装修记(1)——添加一个Jekyll主题</h3>
   <span class="inline">
@@ -91,69 +89,7 @@
   
 
   
-      
-          
-      
-          
-      
-          
-      
-          
-              
-          
-      
-      
-          
-      
-  
 
-  
-      
-      
-          
-              
-                  
-              
-          
-              
-          
-              
-          
-              
-          
-              
-          
-              
-          
-              
-          
-          
-              
-              
-          
-      
-          
-              
-          
-              
-          
-              
-                  
-              
-          
-              
-          
-              
-          
-              
-          
-              
-          
-          
-              
-              
-          
-      
   
 
   <span class="post-meta post-category-and-tag"><i class="fa fa-book">: <span class="category_label" style="background: #BCC4EE"><a href="/blog/category/博客装修记/">博客装修记</a></span></i> &nbsp;&nbsp;&nbsp;<i class="fa fa-tags"></i>: <span class="tag_label"><a href="/blog/tag/github-pages/">Github Pages</a></span>, <span class="tag_label"><a href="/blog/tag/jekyll/">jekyll</a></span></span>
@@ -196,17 +132,17 @@
 
 <p>在配置文件_config.yml中，将下面的代码修改为自己的信息：</p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># Site settings</span>
-<span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span>       <span class="l-Scalar-Plain">Pixyll</span>
-<span class="l-Scalar-Plain">email</span><span class="p-Indicator">:</span>       <span class="l-Scalar-Plain">your_email@example.com</span>
-<span class="l-Scalar-Plain">author</span><span class="p-Indicator">:</span>      <span class="l-Scalar-Plain">John Otander</span>
-<span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="s">&quot;A</span><span class="nv"> </span><span class="s">simple,</span><span class="nv"> </span><span class="s">beautiful</span><span class="nv"> </span><span class="s">theme</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Jekyll</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">emphasizes</span><span class="nv"> </span><span class="s">content</span><span class="nv"> </span><span class="s">rather</span><span class="nv"> </span><span class="s">than</span><span class="nv"> </span><span class="s">aesthetic</span><span class="nv"> </span><span class="s">fluff.&quot;</span>
-<span class="l-Scalar-Plain">baseurl</span><span class="p-Indicator">:</span>     <span class="s">&quot;&quot;</span>
-<span class="l-Scalar-Plain">url</span><span class="p-Indicator">:</span>         <span class="s">&quot;http://pixyll.com&quot;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># Site settings</span>
+<span class="s">title</span><span class="pi">:</span>       <span class="s">Pixyll</span>
+<span class="s">email</span><span class="pi">:</span>       <span class="s">your_email@example.com</span>
+<span class="s">author</span><span class="pi">:</span>      <span class="s">John Otander</span>
+<span class="s">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">A</span><span class="nv"> </span><span class="s">simple,</span><span class="nv"> </span><span class="s">beautiful</span><span class="nv"> </span><span class="s">theme</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Jekyll</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">emphasizes</span><span class="nv"> </span><span class="s">content</span><span class="nv"> </span><span class="s">rather</span><span class="nv"> </span><span class="s">than</span><span class="nv"> </span><span class="s">aesthetic</span><span class="nv"> </span><span class="s">fluff."</span>
+<span class="s">baseurl</span><span class="pi">:</span>     <span class="s2">"</span><span class="s">"</span>
+<span class="s">url</span><span class="pi">:</span>         <span class="s2">"</span><span class="s">http://pixyll.com"</span></code></pre></figure>
 
 <p>在这里还可添加文章url的格式，我的设置是/类别/年份/月份/日期/题目</p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">permalink</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/:category/:year/:month/:day/:title</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">permalink</span><span class="pi">:</span> <span class="s">/:category/:year/:month/:day/:title</span></code></pre></figure>
 
 <p>接下来,</p>
 

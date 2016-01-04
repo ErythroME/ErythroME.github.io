@@ -89,69 +89,7 @@
   
 
   
-      
-          
-      
-          
-      
-          
-              
-          
-      
-          
-      
-      
-          
-      
-  
 
-  
-      
-      
-          
-              
-          
-              
-          
-              
-          
-              
-          
-              
-          
-              
-                  
-              
-          
-              
-          
-          
-              
-              
-          
-      
-          
-              
-          
-              
-          
-              
-          
-              
-          
-              
-          
-              
-          
-              
-                  
-              
-          
-          
-              
-              
-          
-      
   
 
   <span class="post-meta post-category-and-tag"><i class="fa fa-book">: <span class="category_label" style="background: #3DCDE9"><a href="/blog/category/python/">Python</a></span></i> &nbsp;&nbsp;&nbsp;<i class="fa fa-tags"></i>: <span class="tag_label"><a href="/blog/tag/python/">Python</a></span>, <span class="tag_label"><a href="/blog/tag/scripts/">脚本</a></span></span>
@@ -162,7 +100,7 @@
 <article class="post-content container">
   <p id="id_article_text">最近在学编译原理，写词法分析器的过程中，发现了一个问题：目录下每个cPython文件编译运行后会生成.o和.exe文件，再加上编译器备份时生成的bak文件，造成文件十分繁杂。轻微强迫症的我表示不能忍，正好前段时间学了Python，于是用Python写了一个脚本来批量删除多余文件。</p>
 <pre id="id_article_code">
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">os.path</span>
 <span class="kn">import</span> <span class="nn">shutil</span>
@@ -190,11 +128,11 @@
     <span class="n">targetDir</span> <span class="o">=</span> <span class="n">fileDir</span><span class="p">()</span>
     <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span> <span class="n">targetDir</span> <span class="p">)</span> <span class="p">:</span>
         <span class="n">targetFile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="n">targetDir</span><span class="p">,</span> <span class="nb">file</span> <span class="p">)</span>
-        <span class="k">if</span> <span class="n">suffix</span><span class="p">(</span> <span class="nb">file</span><span class="p">,</span> <span class="s">&#39;.o&#39;</span><span class="p">,</span> <span class="s">&#39;.bak&#39;</span><span class="p">,</span> <span class="s">&#39;.exe&#39;</span> <span class="p">):</span>
+        <span class="k">if</span> <span class="n">suffix</span><span class="p">(</span> <span class="nb">file</span><span class="p">,</span> <span class="s">'.o'</span><span class="p">,</span> <span class="s">'.bak'</span><span class="p">,</span> <span class="s">'.exe'</span> <span class="p">):</span>
             <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span> <span class="n">targetFile</span> <span class="p">)</span>
     
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span> <span class="p">:</span>
-    <span class="n">deleteFile</span><span class="p">()</span></code></pre></div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span> <span class="p">:</span>
+    <span class="n">deleteFile</span><span class="p">()</span></code></pre></figure>
 </pre>
 <h4 id="id_article_reference">参考文献</h4>
 <p class="article_reference_item"><a href="http://www.cnblogs.com/pchgo/archive/2011/09/19/2181248.html">Python获取当前脚本文件路径目录</a></p>

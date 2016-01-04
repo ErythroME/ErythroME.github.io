@@ -42,3 +42,5 @@ Temporary Items
 
 # sftp configuration file
 sftp-config.json
+
+*.scssc

@@ -57,3 +57,5 @@ sass:
 # Resource settings
 safe: false
 cdn_url: 
+
+exclude: [vendor]

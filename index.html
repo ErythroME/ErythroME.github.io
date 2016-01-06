@@ -5,7 +5,7 @@ layout: default
 <div class="home">
 
   <div class="posts container">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       <div class="post">
         <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
         <a href="{{ post.url | prepend: site.baseurl }}" class="post-link"><h3 class="h3 post-title">{{ post.title }}</h3></a>
@@ -20,5 +20,5 @@ layout: default
     {% endfor %}
   </div>
 
-  <!-- {% include pagination.html %} -->
+  {% include pagination.html %}
 </div>

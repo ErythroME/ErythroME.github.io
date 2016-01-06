@@ -50,9 +50,13 @@ markdown:     redcarpet
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 permalink:    pretty
-paginate:     3
+paginate:     5
 sass:
   compressed: true
+
+# Pagination
+paginate: 5
+paginate_path: "page:num"
 
 # Resource settings
 safe: false

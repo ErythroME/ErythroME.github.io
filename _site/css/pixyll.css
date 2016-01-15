@@ -623,7 +623,11 @@ html, body {
 
 img {
   width: auto;
-  max-width: 100%; }
+  max-width: 100%;
+  border-radius: 4px;
+  clear: both;
+  display: block;
+  margin: 0 auto; }
 
 .site-wrap {
   min-height: 100%;

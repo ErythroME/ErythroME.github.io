@@ -75,6 +75,6 @@ permalink: /:category/:year/:month/:day/:title
 
 > <strong>运行 <span class="command"><span>git commit -m 'rebuild pages' --allow-empty</span></span> 来强制github pages rebuild</strong>
 
-刷新后顿时![有意思~](http://7xit9q.com1.z0.glb.clouddn.com/decorateMyBlog1st2.jpg)~
+刷新后顿时![有意思~](http://7xit9q.com1.z0.glb.clouddn.com/decorateMyBlog1st2.jpg)
 
 

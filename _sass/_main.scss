@@ -25,6 +25,10 @@ html, body {
 img {
   width: auto;
   max-width: 100%;
+  border-radius: 4px;
+  clear: both;
+  display: block;
+  margin: 0 auto;
 }
 
 .site-wrap {
@@ -173,7 +177,7 @@ table {
 }
 
 .post-footer {
-  @extend .italic;
+  @extend .italic !optional;
 
   margin-top: .75rem;
   text-align: center;

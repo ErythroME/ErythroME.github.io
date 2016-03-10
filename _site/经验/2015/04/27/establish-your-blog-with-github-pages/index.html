@@ -102,20 +102,20 @@
 
 <p>很早之前按照该文里的步骤尝试搭建，但一直出现各种错误，甚为头疼。后来终于在Windows下利用Github Pages成功创建里我自己的博客。下面就来分享一下我的经历。</p>
 
-<hr>
+<hr />
 
 <p>首先，Github Pages有两种搭建途径：</p>
 
 <ol>
-<li>User &amp; Organization Pages<br></li>
-<li>项目下的Pages</li>
+  <li>User &amp; Organization Pages</li>
+  <li>项目下的Pages</li>
 </ol>
 
 <p>第一种Pages，每个用户名只能创建一个与自己的用户名同名的博客；而第二种则属于对应的项目，每个项目都可创建对应Pages</p>
 
 <p>之前尝试搭建时，采用阮老师的方法，建立项目Pages，感觉很容易出错。后来发现直接建立第一种Pages更为方便，所以以下只介绍User Pages的情况</p>
 
-<hr>
+<hr />
 
 <p><em>Step 1:</em> 登录github，新建一个repository，命名为username.github.io，其中的username为当前github账户的用户名。</p>
 
@@ -124,28 +124,34 @@
 <p><em>Step 3:</em> 依照<a href="https://help.github.com/articles/using-jekyll-with-pages/">官方说明</a>，安装bundle。之后的步骤在cmd中进行：</p>
 
 <ol>
-<li><span class="command"><span>ruby &ndash;version</span></span> 查看ruby版本号。如果未安装ruby则需先安装ruby。推荐使用<a href="http://railsinstaller.org/en">Railsinstaller</a>，非常快捷简便。</li>
-<li><p>运行
-<span class="command"><span>gem install bundler</span></span></p></li>
-<li><p>在项目目录中新建名为Gemfile的文件，不加后缀名。</p></li>
-<li><p>运行</br>
-<span class="command"><span>source &lsquo;https//rubygems.org&rsquo;</span></span> </br>
-<span class="command"><span>gem &#39;github-pages&rsquo;</span></span></p></li>
-<li><p>运行
-<span class="command"><span>bundle install</span></span><br>
-如果出现DL开头的两行报错信息，这相当于Warning，可以不管。如果最终提示未安装成功，可以多试几次。</p></li>
-<li><p>运行
+  <li><span class="command"><span>ruby –version</span></span> 查看ruby版本号。如果未安装ruby则需先安装ruby。推荐使用<a href="http://railsinstaller.org/en">Railsinstaller</a>，非常快捷简便。</li>
+  <li>
+    <p>运行
+<span class="command"><span>gem install bundler</span></span></p>
+  </li>
+  <li>在项目目录中新建名为Gemfile的文件，不加后缀名。</li>
+  <li>
+    <p>运行&lt;/br&gt;
+<span class="command"><span>source ‘https//rubygems.org’</span></span> &lt;/br&gt;
+<span class="command"><span>gem ‘github-pages’</span></span></p>
+  </li>
+  <li>运行
+<span class="command"><span>bundle install</span></span><br />
+如果出现DL开头的两行报错信息，这相当于Warning，可以不管。如果最终提示未安装成功，可以多试几次。</li>
+  <li>
+    <p>运行
 <span class="command"><span>bundle exec jekyll serve</span></span> 
-该命令用来启动jekyll server。在浏览器中输入localhost:4000，可以看到博客的index页面。cmd中输入ctrl+c，则可关闭server。运行jekyll server相当于在本地预览效果，之后对博客进行修改或发布博文时可以先在本地随时预览效果。</p></li>
-<li><p>参照<a href="http://justcoding.iteye.com/blog/1959737">这篇文章</a>中有关目录结构的部分建立目录结构。</p></li>
-<li><p>参照<a href="http://www.cnblogs.com/purediy/archive/2013/03/07/2948892.html">这篇文章</a>中配置_config.yml文件的方法进行个人设置。</p></li>
-<li><p>参照<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">这篇文章</a>，尝试写一篇博客。注意：不用在_config.yml中配置baseurl，写博客时也不需要引用baseurl。</p></li>
-<li><p>push一下，访问username.github.io查看效果。</p></li>
+该命令用来启动jekyll server。在浏览器中输入localhost:4000，可以看到博客的index页面。cmd中输入ctrl+c，则可关闭server。运行jekyll server相当于在本地预览效果，之后对博客进行修改或发布博文时可以先在本地随时预览效果。</p>
+  </li>
+  <li>参照<a href="http://justcoding.iteye.com/blog/1959737">这篇文章</a>中有关目录结构的部分建立目录结构。</li>
+  <li>参照<a href="http://www.cnblogs.com/purediy/archive/2013/03/07/2948892.html">这篇文章</a>中配置_config.yml文件的方法进行个人设置。</li>
+  <li>参照<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">这篇文章</a>，尝试写一篇博客。注意：不用在_config.yml中配置baseurl，写博客时也不需要引用baseurl。</li>
+  <li>push一下，访问username.github.io查看效果。</li>
 </ol>
 
 <p>如果你的博客成功出现效果，那么恭喜你~</p>
 
-<hr>
+<hr />
 
 <p>进一步配置和修改Jekyll可参照<a href="http://blog.javachen.com/2013/08/31/my-jekyll-config/">这篇文章</a>。</p>
 

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>如何在JavaScript中嵌入HTML代码 &#8211; Megas的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="在JavaScript中嵌入HTML代码是一个常用的简单技巧，它的实现方法其实有很多种">
+    <meta name="author" content="Megas">
+    <meta name="category" content="JavaScript">
+    <link rel="canonical" href="http://erythrome.github.io/javascript/2016/03/10/how-to-insert-html-in-javascript/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css" type="text/css">
+
+    <!-- Fonts -->
+    <!-- <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'> -->
+    
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    
+
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="如何在JavaScript中嵌入HTML代码">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://erythrome.github.io/javascript/2016/03/10/how-to-insert-html-in-javascript/">
+    <meta property="og:site_name" content="Megas的博客">
+</head>
+
+<body class="">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="m2 wrap">
+    <div class="measure">
+      <!-- <a href="http://erythrome.github.io" class="site-title">Megas的博客</a> -->
+      <a href="javascript:void(0)" onclick="window.location.href='http://erythrome.github.io'" class="site-title">Megas的博客</a>
+      <nav class="site-nav right">
+        <a href="/categories/">Categories</a>
+<a href="/tags/">Tags</a>
+<a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="left">
+    
+      <a class="fa fa-github" href="https://github.com/ErythroME"></a>
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:megas.nmsis@hotmail.com"></a>
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p3 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+
+<div class="post-header mb3">
+  <h3>如何在JavaScript中嵌入HTML代码</h3>
+  <span class="inline">
+  <span class="post-meta post-date">Mar 10, 2016</span>
+  
+
+  
+
+  
+
+  <span class="post-meta post-category-and-tag"><i class="fa fa-book">: <span class="category_label" style="background: #83A2D0"><a href="/blog/category/JavaScript/">JavaScript</a></span></i> &nbsp;&nbsp;&nbsp;<i class="fa fa-tag"></i>: : <span class="tag_label"><a href="/blog/tag/html/">html</a></span></span>
+  </span>
+  </br>
+</div>
+
+<article class="post-content container">
+  <h4 id="section">前言</h4>
+
+<p>写实验室项目时，我最常写的代码之一便是通过Ajax接收后台数据后，将其与HTML代码拼接并嵌入页面。开始，我写的代码类似这样：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s1">'&lt;li style="padding:5px 5px;"&gt;&lt;div&gt;&lt;div class="row"&gt;&lt;div class="col-xs-5"&gt;&lt;img style="height:100%; max-height:70px;width:100%;" src="'</span><span class="o">+</span><span class="nx">portrait</span><span class="o">+</span><span class="s1">'" /&gt;&lt;/div&gt;&lt;div class="col-xs-7"&gt;&lt;a style="color:black;text-decoration:none;" href="'</span><span class="o">+</span><span class="nx">info_url</span><span class="o">+</span><span class="s1">'"&gt;'</span><span class="o">+</span><span class="nx">orgList</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">orgName</span><span class="o">+</span><span class="s1">'&lt;/a&gt;&lt;p style="height:50px;margin: 15px 0 0 0;"&gt;'</span><span class="o">+</span><span class="nx">orgList</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">province</span><span class="o">+</span><span class="s1">'&lt;br/&gt;信用等级：'</span><span class="o">+</span><span class="nx">orgList</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">creditRating</span><span class="o">+</span><span class="s1">'&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;'</span><span class="p">;</span>					
+</code></pre>
+</div>
+
+<p>后来Review代码时，只觉得</p>
+
+<p><img src="http://7xit9q.com1.z0.glb.clouddn.com/howToInsertHTMLIntoJS%E6%97%A5%E4%BA%86%E7%8B%97%E4%BA%86.jpg" alt="日了狗了" /></p>
+
+<p>除了代码可读性，代码提示也是嵌入HTML时需要考虑的问题。直接在JavaScript中写HTML时，Sublime Text的Emmet插件就几乎不能使用，给实际编码工作带来了极大不便。</p>
+
+<p>于是我主要在<a href="https://www.zhihu.com/question/20240397">这里</a>发现了在JavaScript代码嵌入HTML的N种方法。现总结如下：</p>
+
+<hr />
+
+<h4 id="section-1">常规方法</h4>
+
+<p>常规方法主要有四种：</p>
+
+<ol>
+  <li>
+    <p>使用”\”</p>
+
+    <p>利用反斜杠将字符串分隔成多行，效果相当于一行。反斜杠后面必须加换行符。</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s1">'\
+    -------\
+    ....\
+    -------\'</span><span class="p">;</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>使用”+”</p>
+
+    <p>加号能够连接字符串。</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s1">'-----'</span><span class="o">+</span>
+          <span class="s1">'------'</span><span class="o">+</span>
+          <span class="s1">'...'</span><span class="o">+</span>
+          <span class="s1">'------'</span><span class="p">;</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>String.concat()</p>
+
+    <p>字符串连接函数str.concat(string2, string3[, …, stringN])。</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span>
+    <span class="s1">'------'</span><span class="p">,</span>
+    <span class="s1">'------'</span><span class="p">,</span>
+    <span class="p">...,</span>
+    <span class="s1">'------'</span>
+<span class="p">);</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Array.join()</p>
+
+    <p>Array的join()方法将数组的所有元素连接得到一个字符串：str = arr.join([separator = ‘,’])。</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="p">[</span>
+<span class="s1">'-----'</span><span class="p">,</span>
+<span class="s1">'-----'</span><span class="p">,</span>
+<span class="p">...,</span>
+<span class="s1">'-----'</span>
+<span class="p">].</span><span class="nx">join</span><span class="p">(</span><span class="s1">''</span><span class="p">);</span>
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<p>Wait！这些方案其实还是直接在JavaScript中写HTML，说好的代码提示呢？实际上，我平时会先在HTML部分写好所需代码，再整体ctrl+v到JavaScript中，利用Sublime的多行编辑功能，统一给HTML代码加上符号……
+<img src="http://7xit9q.com1.z0.glb.clouddn.com/howToInsertHTMLIntoJS%E6%88%91%E6%8A%95%E9%99%8D.jpg" alt="我投降" /></p>
+
+<hr />
+
+<h4 id="section-2">利用注释</h4>
+
+<p>这种方法的思路是将待嵌入的HTML代码置于一个函数中，之后将整个函数转化为字符串，截取代码部分。我找到两种实现方法：</p>
+
+<ul>
+  <li><a href="http://yiding-he.iteye.com/blog/58180">第一种方式</a></li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+	<span class="cm">/*
+		&lt;div&gt;html code&lt;/div&gt;
+	*/</span>
+<span class="p">};</span>
+<span class="nb">Function</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getMultiLines</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">lines</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+	<span class="nx">lines</span> <span class="o">=</span> <span class="nx">lines</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="nx">lines</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'/*'</span><span class="p">)</span><span class="o">+</span><span class="mi">3</span><span class="p">,</span> <span class="nx">lines</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="s1">'*/'</span><span class="p">));</span>
+	<span class="k">return</span> <span class="nx">lines</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">str</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">getMultiLines</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>有人说这种方式在Firefox中会出问题，我自己用Firefox 40测试后并未发现出错。</p>
+
+<ul>
+  <li><a href="http://javascript.ruanyifeng.com/grammar/string.html">第二种方式</a></li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="cm">/*
+	line 1
+	line 2
+	line 3
+*/</span><span class="p">}).</span><span class="nx">toString</span><span class="p">().</span><span class="nx">split</span><span class="p">(</span><span class="s1">'\n'</span><span class="p">).</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">'\n'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<hr />
+
+<h4 id="htmlxhr">HTML独立，使用XHR</h4>
+
+<p>这种方法将待嵌入的HTML代码置于单独的文件中，通过同步XHR请求，将代码嵌入JavaScript。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">Template</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">'/template/temp.html'</span><span class="p">);</span> <span class="c1">// Template是一个工具类，负责发送同步XHR请求并返回结果</span>
+<span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'element_id'</span><span class="p">);</span>
+<span class="nx">target</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">str</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>与这种思想类似的有<a href="https://github.com/seajs/seajs-text/issues/1">seajs文本插件</a>。</p>
+
+<p>我个人觉得，嵌入的HTML大多都是比较短的代码片段，为此专门建立N个文件，再用XHR请求，有种“杀鸡用牛刀”的感觉嘛~Anyway，
+<img src="http://7xit9q.com1.z0.glb.clouddn.com/howToInsertHTMLIntoJS%E4%BD%A0%E4%BB%AC%E5%BC%80%E5%BF%83%E5%B0%B1%E5%A5%BD.jpg" alt="你们开心就好" /></p>
+
+<hr />
+
+<h4 id="section-3">引用模板</h4>
+
+<p>也可以在页面内定义一个模板，需要时引用该模板：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/template"</span> <span class="na">id=</span><span class="s">"html_template"</span><span class="nt">&gt;</span>
+	<span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">html</span> <span class="nx">code</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+	<span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'html_template'</span><span class="p">).</span><span class="nx">innerHTML</span><span class="p">();</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+</article>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'megasblog';
+    var disqus_identifier = '/javascript/2016/03/10/how-to-insert-html-in-javascript';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+<!--  -->
+
+
+
+<div class='top'><a href='#'> &#8593; </a></div>
+
+
+      </div>
+    </div>
+
+  </div>
+  <footer class="footer">
+  <div class="p2 wrap">
+    <div class="measure mt1 center">
+      <small>
+        Megas Liu
+      </small>
+    </div>
+    <div class="measure mt1 center">
+      <small>
+        Powered By <a href="http://basscss.com">BASSCSS</a> |
+                   <a href="http://jekyllrb.com">Jekyll</a> |
+                   <a href="http://refills.bourbon.io/">Refills</a> |
+                   <a href="http://ethanschoonover.com/solarized">Solarized</a> |
+                   <a href="http://pixyll.com">Pixyll</a> |
+                   <a href="https://disqus.com">Disqus</a> 
+      </small>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

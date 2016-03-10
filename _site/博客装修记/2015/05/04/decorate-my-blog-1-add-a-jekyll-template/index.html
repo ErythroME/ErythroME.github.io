@@ -98,8 +98,7 @@
 </div>
 
 <article class="post-content container">
-  <h4 id="为什么要选择主题">为什么要选择主题</h4>
-
+  <h4 id="section">为什么要选择主题</h4>
 <p>因为懒TAT。</p>
 
 <p>首先，刚接触Jekyll时，引入主题可以让我们快速地了解Jekyll。模板的目录结构及参考代码一般都比较工整，值得参考。其次，对于广大程序猿来说，辛苦手写的页面很容易丑到掉渣，引入模板之后再根据自己的心意修改更为便捷。</p>
@@ -108,27 +107,24 @@
 
 <p>为了再现我的博客装修过程，我在Github上新建了一个Jekyll主题项目：<a href="https://github.com/ErythroME/Mixyll">Mixyll</a>。</p>
 
-<hr>
-
-<h4 id="引入pixyll">引入Pixyll</h4>
-
-<p>引入Pixyll非常简单——复制+粘贴。</p>
+<hr />
+<p>####引入Pixyll
+引入Pixyll非常简单——复制+粘贴。</p>
 
 <ul>
-<li>在Github上fork Pixyll。</li>
-<li>在本机的Github目录下运行 <span class="command"><span>git clone https://github.com/johnotander/pixyll.git</span></span> 将Pixyll clone下来。</li>
+  <li>在Github上fork Pixyll。</li>
+  <li>在本机的Github目录下运行 <span class="command"><span>git clone https://github.com/johnotander/pixyll.git</span></span> 将Pixyll clone下来。</li>
 </ul>
 
 <p>在将Pixyll中的内容复制到我们的博客目录前，先来看一下Pixyll中原本都有些什么内容：
-<img src="http://7xit9q.com1.z0.glb.clouddn.com/decorateMyBlog1st1.png" alt="Pixyll 目录"></p>
+<img src="http://7xit9q.com1.z0.glb.clouddn.com/decorateMyBlog1st1.png" alt="Pixyll 目录" /></p>
 
 <ul>
-<li>大体了解以后在命令行中运行 <span class="command"><span>cp -r pixyll/ Mixyll</span></span> 将pixyll目录下的所有文件复制到博客目录中（我的目录名称为Mixyll）。</li>
+  <li>大体了解以后在命令行中运行 <span class="command"><span>cp -r pixyll/ Mixyll</span></span> 将pixyll目录下的所有文件复制到博客目录中（我的目录名称为Mixyll）。</li>
 </ul>
 
-<hr>
-
-<h4 id="修改pixyll的配置信息">修改Pixyll的配置信息</h4>
+<hr />
+<p>####修改Pixyll的配置信息</p>
 
 <p>在配置文件_config.yml中，将下面的代码修改为自己的信息：</p>
 
@@ -147,42 +143,43 @@
 <p>接下来,</p>
 
 <ul>
-<li>开启页面浮现的动画效果：animated置为true</li>
-<li><p>可在每篇文章的末尾添加作者信息：将show_post_footers置为true</p>
+  <li>开启页面浮现的动画效果：animated置为true</li>
+  <li>
+    <p>可在每篇文章的末尾添加作者信息：将show_post_footers置为true</p>
 
-<blockquote>
-<p>需要注意：如果show_post_footers设为true，则需要将_include文件夹下的post_footer.html中的相应内容替换为自己的信息。</p>
-</blockquote></li>
-<li><p>在博客header内显示社交网络图标：show_social_icons置为true，并填写相应社交网络的用户名、id等信息</p></li>
+    <blockquote>
+      <p>需要注意：如果show_post_footers设为true，则需要将_include文件夹下的post_footer.html中的相应内容替换为自己的信息。</p>
+    </blockquote>
+  </li>
+  <li>在博客header内显示社交网络图标：show_social_icons置为true，并填写相应社交网络的用户名、id等信息</li>
 </ul>
 
 <p>配置文件_config.yml修改完毕后，运行 <span class="command"><span>jekyll serve</span></span> 会看到页面头部标题已经变成了自己在_config.yml中设置的title，nice~</p>
 
-<hr>
-
-<h4 id="修改pixyll的基本信息">修改Pixyll的基本信息</h4>
+<hr />
+<p>####修改Pixyll的基本信息</p>
 
 <p>之后就是修改页面啦~需要修改的页面有以下几个：</p>
 
 <ul>
-<li>about.md</li>
-<li>footer.html (_includes内)</li>
-<li>post_footer.html  (_includes内)</li>
+  <li>about.md</li>
+  <li>footer.html (_includes内)</li>
+  <li>post_footer.html  (_includes内)</li>
 </ul>
 
 <p>分别将其修改为自己的信息，不要忘记感谢模板的原作者哟~</p>
 
-<hr>
-
+<hr />
 <p>至此，主题的基本信息修改完成，在本地运行jekyll没有报错的话就可以提交了。</p>
 
 <p>将修改的内容push后，你会看到修改完成的页面；如果没看到，可以稍等几分钟；如果等了半天也没看到……duang duang duang</p>
 
 <blockquote>
-<p><strong>运行 <span class="command"><span>git commit -m &lsquo;rebuild pages&rsquo; &ndash;allow-empty</span></span> 来强制github pages rebuild</strong></p>
+  <p><strong>运行 <span class="command"><span>git commit -m ‘rebuild pages’ –allow-empty</span></span> 来强制github pages rebuild</strong></p>
 </blockquote>
 
-<p>刷新后顿时<img src="http://7xit9q.com1.z0.glb.clouddn.com/decorateMyBlog1st2.jpg" alt="有意思~"></p>
+<p>刷新后顿时<img src="http://7xit9q.com1.z0.glb.clouddn.com/decorateMyBlog1st2.jpg" alt="有意思~" /></p>
+
 
 </article>
 

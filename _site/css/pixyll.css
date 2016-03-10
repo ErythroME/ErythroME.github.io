@@ -24,7 +24,7 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
   display: block; }
 
 body {
-  font-family: '微软雅黑', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   line-height: 1.5rem;
   font-weight: normal; }
 
@@ -615,7 +615,7 @@ a:hover {
 
 */
 body {
-  font-family: '微软雅黑', "Merriweather",'Arial', "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   background: #ffffff; }
 
 html, body {

@@ -35,21 +35,21 @@ summary: favicon和Apple touch icon都可以作为网站的logo，它们虽然�
 ####使用favicon和Apple touch icon
 可以直接在页面的head标签内添加
 
-```html
+~~~html
 <head>
 	<link rel="icon" href="icon-name.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="icon-name.ico" type="image/x-icon" />
 </head>
-```
+~~~
 即可添加名为icon-name的favicon。
 
 而要Apple touch icon通过link标签的apple-touch-icon属性标明，还需设置sizes属性。以57x57大小的icon为例，代码为：
 
-```html
+~~~html
 <head>
 	<link rel="apple-touch-icon" href="icon-name.png" sizes="57x57" />
 </head>
-```
+~~~
 
 ---
 

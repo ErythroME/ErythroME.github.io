@@ -53,7 +53,7 @@ codewars作为一个OJ，其中的“怪”自然是指题目了。codewars中�
 
 ---
 
-总之，如果你想对Javascript、Python有更多了解，提升自己的技能，来到codewars，你会觉得![YES!](http://7xit9q.com1.z0.glb.clouddn.com/IntroductionToCodewars2.jpg)
+总之，如果你想对JavaScript、Python有更多了解，提升自己的技能，来到codewars，你会觉得![YES!](http://7xit9q.com1.z0.glb.clouddn.com/IntroductionToCodewars2.jpg)
 
 
 

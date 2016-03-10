@@ -1,6 +1,6 @@
 ---
 layout: blog_by_category
-title: Javascript
-category: javascript
-permalink: /blog/category/javascript/
+title: JavaScript
+category: JavaScript
+permalink: /blog/category/JavaScript/
 ---

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 学Javascript的好去处——codewars
-category: Javascript
+title: 学JavaScript的好去处——codewars
+category: JavaScript
 tags: [codewars]
 summary: codewars是一家OJ网站，上面的题目丰富，更有组队升级等有趣的模式，是提升Javascript、Python等技能的好去处
 ---
 
 ####一个OJ，又不仅仅是OJ
-[codewars](http://www.codewars.com)可以说是一个面向Web程序员的OJ。与大多以C/C++为解题语言的OJ不同，codewars主要支持Javascript、Python、Ruby、Java等Web开发常用的语言。
+[codewars](http://www.codewars.com)可以说是一个面向Web程序员的OJ。与大多以C/C++为解题语言的OJ不同，codewars主要支持JavaScript、Python、Ruby、Java等Web开发常用的语言。
 
 在我看来，codewars的主要特点有：
 

@@ -6,7 +6,8 @@ tags: [codewars]
 summary: codewars是一家OJ网站，上面的题目丰富，更有组队升级等有趣的模式，是提升JavaScript、Python等技能的好去处
 ---
 
-####一个OJ，又不仅仅是OJ
+#### 一个OJ，又不仅仅是OJ
+
 [codewars](http://www.codewars.com)可以说是一个面向Web程序员的OJ。与大多以C/C++为解题语言的OJ不同，codewars主要支持JavaScript、Python、Ruby、Java等Web开发常用的语言。
 
 在我看来，codewars的主要特点有：
@@ -20,7 +21,8 @@ summary: codewars是一家OJ网站，上面的题目丰富，更有组队升级�
 
 ---
 
-####在codewars中升级打怪
+#### 在codewars中升级打怪
+
 codewars作为一个OJ，其中的“怪”自然是指题目了。codewars中的每道题目称为一个Kata，根据其难度不同具有一定的荣誉值(Honor)。荣誉不断积累则会获得升级。各个等级如下：
 
 ![levels in codewars](http://7xit9q.com1.z0.glb.clouddn.com/IntroductionToCodewars1.png)
@@ -43,7 +45,8 @@ codewars作为一个OJ，其中的“怪”自然是指题目了。codewars中�
 
 ---
 
-####积累荣誉的108种方法
+#### 积累荣誉的108种方法
+
 除了挑战Kata来赢得荣誉值这种最基本的方式，还有几种方法来获得荣誉：
 
 * 邀请队友加入codewars

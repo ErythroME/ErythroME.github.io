@@ -4,6 +4,7 @@ title: Windows下Github Pages搭建体验
 category: 经验
 tags: [github-pages, windows, jekyll]
 summary: Windows下Github Pages搭建体验
+
 ---
 
 建立一个可以自由配置的个人博客对很多人（比如我自己）来说颇有吸引力。关于为什么不用Wordpress等而选择Github Pages无需赘述，可以参见[这篇文章](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html).

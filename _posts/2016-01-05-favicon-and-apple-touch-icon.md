@@ -6,7 +6,8 @@ tags: [html]
 summary: favicon和Apple touch icon都可以作为网站的logo，它们虽然简单且不起眼，却是我们经常见到的标识
 ---
 
-####什么是favicon？什么是Apple touch icon？
+#### 什么是favicon？什么是Apple touch icon？
+
 大家有意无意扫过浏览器标签时，很可能看到像这样的页面名前的小图片：
 
 ![favicon](http://7xit9q.com1.z0.glb.clouddn.com/faviconAndAppleTouchIcon1.png)
@@ -21,7 +22,8 @@ summary: favicon和Apple touch icon都可以作为网站的logo，它们虽然�
 
 ---
 
-####制作favicon和Apple touch icon
+#### 制作favicon和Apple touch icon
+
 有很多网站可以根据上传的图片自动生成一系列favicon和Apple touch icon。诸如
 
 *  [Favicon & App Icon Generator](http://www.favicon-generator.org):在这个网站上可以快速制作出包含一个16x16的favicon和一系列Apple touch icon在内的一系列icon，网站还提供完整的引用代码，十分方便。网站还有很多他人制作的icon供下载。
@@ -32,7 +34,8 @@ summary: favicon和Apple touch icon都可以作为网站的logo，它们虽然�
 
 ---
 
-####使用favicon和Apple touch icon
+#### 使用favicon和Apple touch icon
+
 可以直接在页面的head标签内添加
 
 ~~~html
@@ -53,7 +56,8 @@ summary: favicon和Apple touch icon都可以作为网站的logo，它们虽然�
 
 ---
 
-####使用中的细节问题
+#### 使用中的细节问题
+
 [这篇文章](http://blog.csdn.net/freshlover/article/details/9310437)中介绍了Apple touch icon应用时的图标搜索顺序规则，和去掉图片效果的方法。
 
 而[这篇文章](http://www.jb51.net/article/60004.htm)介绍了在Android中将网页添加到主屏所需的对Apple touch icon的调用方法。

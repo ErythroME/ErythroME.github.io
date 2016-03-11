@@ -6,6 +6,7 @@ tags: [alfred, workflow]
 summary: 虽然在Mac下Spotlight有很多强大的功能，但与Alfred相比还是略有欠缺。而武装各式workflow后Alfred堪称神兵利器~
 
 ---
+
 #### Spotlight与Alfred
 
 OS X 中集成的Spotlight拥有快速文件检索、快速打开应用、计算等功能，感觉非常方便。Spotlight中我最喜欢的功能是下面这个快速检索和预览文件
@@ -17,6 +18,7 @@ OS X 中集成的Spotlight拥有快速文件检索、快速打开应用、计算
 ![Alfred](http://7xit9q.com1.z0.glb.clouddn.com/AlfredAndSomeUsefulWorkflowsImage3.png)
 
 ---
+
 #### Alfred中的Snippets
 
 虽然人们一提Alfred必提workflow，但我还是想先介绍一下Snippets。
@@ -26,6 +28,7 @@ OS X 中集成的Spotlight拥有快速文件检索、快速打开应用、计算
 Snippets功能非常简单，不过用了才发现，小小功能省不少事哟~
 
 ---
+
 #### 花式workflow
 
 购买Alfred的Powerpack后，就可以尽情搜索各式workflow，也可以自己动手编写。筒子们，你们的征途是workflow大海~
@@ -57,6 +60,7 @@ Snippets功能非常简单，不过用了才发现，小小功能省不少事哟
 ![知乎](http://7xit9q.com1.z0.glb.clouddn.com/AlfredAndSomeUsefulWorkflowsImage7.png)
 
 ---
+
 还有很多有意思的workflow，可以查看这些网页：
 
 * [Alfred官网的分享区](http://www.alfredforum.com/forum/3-share-your-workflows/)

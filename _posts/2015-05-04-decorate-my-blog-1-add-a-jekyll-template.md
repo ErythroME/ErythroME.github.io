@@ -19,6 +19,7 @@ summary: 要搞一个炫酷的个人博客，搭建好Github Pages只是第一�
 为了再现我的博客装修过程，我在Github上新建了一个Jekyll主题项目：[Mixyll](https://github.com/ErythroME/Mixyll)。
 
 ---
+
 #### 引入Pixyll
 
 引入Pixyll非常简单——复制+粘贴。
@@ -32,6 +33,7 @@ summary: 要搞一个炫酷的个人博客，搭建好Github Pages只是第一�
 * 大体了解以后在命令行中运行 <span class="command"><span>cp -r pixyll/ Mixyll</span></span> 将pixyll目录下的所有文件复制到博客目录中（我的目录名称为Mixyll）。
 
 ---
+
 #### 修改Pixyll的配置信息
 
 在配置文件\_config.yml中，将下面的代码修改为自己的信息：
@@ -61,6 +63,7 @@ permalink: /:category/:year/:month/:day/:title
 配置文件\_config.yml修改完毕后，运行 <span class="command"><span>jekyll serve</span></span> 会看到页面头部标题已经变成了自己在\_config.yml中设置的title，nice~
 
 ---
+
 #### 修改Pixyll的基本信息
 
 之后就是修改页面啦~需要修改的页面有以下几个：
@@ -72,6 +75,7 @@ permalink: /:category/:year/:month/:day/:title
 分别将其修改为自己的信息，不要忘记感谢模板的原作者哟~
 
 ---
+
 至此，主题的基本信息修改完成，在本地运行jekyll没有报错的话就可以提交了。
 
 将修改的内容push后，你会看到修改完成的页面；如果没看到，可以稍等几分钟；如果等了半天也没看到……duang duang duang

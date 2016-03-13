@@ -99,6 +99,7 @@
 
 <article class="post-content container">
   <h4 id="faviconapple-touch-icon">什么是favicon？什么是Apple touch icon？</h4>
+
 <p>大家有意无意扫过浏览器标签时，很可能看到像这样的页面名前的小图片：</p>
 
 <p><img src="http://7xit9q.com1.z0.glb.clouddn.com/faviconAndAppleTouchIcon1.png" alt="favicon" /></p>
@@ -114,6 +115,7 @@
 <hr />
 
 <h4 id="faviconapple-touch-icon-1">制作favicon和Apple touch icon</h4>
+
 <p>有很多网站可以根据上传的图片自动生成一系列favicon和Apple touch icon。诸如</p>
 
 <ul>
@@ -127,27 +129,29 @@
 <hr />
 
 <h4 id="faviconapple-touch-icon-2">使用favicon和Apple touch icon</h4>
+
 <p>可以直接在页面的head标签内添加</p>
 
-<p>~~~html</p>
-<head>
-	<link rel="icon" href="icon-name.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="icon-name.ico" type="image/x-icon" />
-</head>
-<p>~~~
-即可添加名为icon-name的favicon。</p>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;head&gt;</span>
+	<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">href=</span><span class="s">"icon-name.ico"</span> <span class="na">type=</span><span class="s">"image/x-icon"</span> <span class="nt">/&gt;</span>
+	<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span> <span class="na">href=</span><span class="s">"icon-name.ico"</span> <span class="na">type=</span><span class="s">"image/x-icon"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+</code></pre>
+</div>
+<p>即可添加名为icon-name的favicon。</p>
 
 <p>而要Apple touch icon通过link标签的apple-touch-icon属性标明，还需设置sizes属性。以57x57大小的icon为例，代码为：</p>
 
-<p>~~~html</p>
-<head>
-	<link rel="apple-touch-icon" href="icon-name.png" sizes="57x57" />
-</head>
-<p>~~~</p>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;head&gt;</span>
+	<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">href=</span><span class="s">"icon-name.png"</span> <span class="na">sizes=</span><span class="s">"57x57"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+</code></pre>
+</div>
 
 <hr />
 
 <h4 id="section">使用中的细节问题</h4>
+
 <p><a href="http://blog.csdn.net/freshlover/article/details/9310437">这篇文章</a>中介绍了Apple touch icon应用时的图标搜索顺序规则，和去掉图片效果的方法。</p>
 
 <p>而<a href="http://www.jb51.net/article/60004.htm">这篇文章</a>介绍了在Android中将网页添加到主屏所需的对Apple touch icon的调用方法。</p>
